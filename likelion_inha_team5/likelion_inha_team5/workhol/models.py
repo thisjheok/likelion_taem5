@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import AbstractUser, BaseUserManager
+from django.utils import timezone
 
 class MyUserManager(BaseUserManager):
     def create_user(self, id, email, password=None, **extra_fields):
@@ -16,7 +17,7 @@ class MyUserManager(BaseUserManager):
         extra_fields.setdefault('is_superuser', True)
         return self.create_user(id, email, password, **extra_fields)
 
-class MyUser(AbstractBaseUser):
+class MyUser(AbstractUser):
     GENDER_CHOICES = [
         ('M', '남자'),
         ('F', '여자'),
@@ -31,6 +32,22 @@ class MyUser(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
+
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name='myuser_set',  # related_name 추가
+        blank=True,
+        help_text=('The groups this user belongs to. A user will get all permissions '
+                   'granted to each of their groups.'),
+        related_query_name='user',
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name='myuser_set',  # related_name 추가
+        blank=True,
+        help_text='Specific permissions for this user.',
+        related_query_name='user',
+    )
 
     objects = MyUserManager()
 
