@@ -1,15 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>회원가입</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 50%;
+            margin: auto;
+        }
+        .form-container label, .form-container input, .form-container select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .form-container input[type="text"], 
+        .form-container input[type="email"], 
+        .form-container input[type="password"], 
+        .form-container select {
+            width: 50%; /* 크기를 줄입니다 */
+            padding: 5px; /* 입력 박스 안쪽 여백을 추가 */
+            font-size: 14px; /* 글자 크기를 조정 */
+        }
+        button {
+            width: 50%; /* 버튼 크기도 조정 */
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h2>Sign Up</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Sign Up</button>
-    </form>
+    <div class="form-container">
+        <h1>회원가입</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -7,6 +7,10 @@ from django.contrib.auth import login, authenticate
 from .forms import SignUpForm
 from django.contrib.auth.forms import AuthenticationForm
 
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate
+from .forms import SignUpForm, LoginForm
+
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -14,9 +18,9 @@ def signup(request):
             user = form.save(commit=False)
             user.set_password(form.cleaned_data['password'])
             user.save()
-            username = form.cleaned_data.get('username')
+            id = form.cleaned_data.get('id')
             password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
+            user = authenticate(id=id, password=password)
             if user is not None:
                 login(request, user)
                 return redirect('home')  # Redirect to home page after signup
@@ -26,22 +30,16 @@ def signup(request):
 
 def login_view(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, data=request.POST)
+        form = LoginForm(request, data=request.POST)
         if form.is_valid():
-            username = form.cleaned_data.get('username')
+            id = form.cleaned_data.get('id')  # 여기서 'username'을 'id'로 변경
             password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
+            user = authenticate(id=id, password=password)
             if user is not None:
                 login(request, user)
-                purpose = user.purpose
-                if purpose == '워홀':
-                    return redirect('workhol_site')
-                elif purpose == '어학연수':
-                    return redirect('language_study_site')
-                elif purpose == '인턴':
-                    return redirect('intern_site')
+                return redirect('home')  # 로그인 후 홈으로 리디렉션
     else:
-        form = AuthenticationForm()
+        form = LoginForm()
     return render(request, 'workhol/login.html', {'form': form})
 
 def home(request):
