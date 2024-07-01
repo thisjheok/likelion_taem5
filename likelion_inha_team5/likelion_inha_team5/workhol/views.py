@@ -23,7 +23,7 @@ def signup(request):
             user = authenticate(id=id, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')  # Redirect to home page after signup
+                return redirect('home')
     else:
         form = SignUpForm()
     return render(request, 'workhol/signup.html', {'form': form})
@@ -32,12 +32,12 @@ def login_view(request):
     if request.method == 'POST':
         form = LoginForm(request, data=request.POST)
         if form.is_valid():
-            id = form.cleaned_data.get('id')  # 여기서 'username'을 'id'로 변경
+            id = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(id=id, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')  # 로그인 후 홈으로 리디렉션
+                return redirect('home')
     else:
         form = LoginForm()
     return render(request, 'workhol/login.html', {'form': form})

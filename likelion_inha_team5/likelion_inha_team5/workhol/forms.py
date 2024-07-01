@@ -3,29 +3,29 @@ from django.contrib.auth.forms import AuthenticationForm
 from .models import MyUser
 
 class SignUpForm(forms.ModelForm):
+    password_confirm = forms.CharField(label="비밀번호 확인:", widget=forms.PasswordInput())
+
     class Meta:
         model = MyUser
         fields = ['id', 'email', 'username', 'birth_date', 'gender', 'phone_number', 'password']
         widgets = {
             'password': forms.PasswordInput(),
-            'birth_date': forms.DateInput(attrs={'type': 'date'}),  # 날짜 선택 달력 추가
-            
-        }
-
-    def clean_password(self):
-        password = self.cleaned_data.get('password')
-        # 추가적인 비밀번호 검증 로직이 필요하다면 여기에 작성
-        return password
-    
-class Meta:
-        model = MyUser
-        fields = ['id', 'email', 'username', 'birth_date', 'gender', 'phone_number', 'password']
-        widgets = {
-            'gender': forms.RadioSelect
+            'birth_date': forms.DateInput(attrs={'type': 'date'}),
+            'gender': forms.Select()
         }
         labels = {
             'gender': 'Gender'
         }
 
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data.get("password")
+        password_confirm = cleaned_data.get("password_confirm")
+
+        if password and password_confirm and password != password_confirm:
+            self.add_error('password_confirm', '비밀번호가 일치하지 않습니다. 알맞게 입력해주세요.')
+
+        return cleaned_data
+
 class LoginForm(AuthenticationForm):
-    username = forms.CharField(label="ID")  # 레이블을 "ID"로 변경
+    username = forms.CharField(label="ID")
