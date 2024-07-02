@@ -59,3 +59,8 @@ class PostForm(forms.ModelForm):
     #     super(PostForm, self).__init__(*args, **kwargs)
     #     self.fields['continent'].queryset = Continent.objects.all()
     #     self.fields['country'].queryset = Country.objects.all()
+
+class CommentsForm(forms.ModelForm):
+    class Meta:
+        model = Comments
+        fields = ['author', 'content']
