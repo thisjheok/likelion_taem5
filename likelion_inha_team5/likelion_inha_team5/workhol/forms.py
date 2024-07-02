@@ -31,16 +31,22 @@ class LoginForm(AuthenticationForm):
     username = forms.CharField(label="ID")
 
 class PostForm(forms.ModelForm):
-    continent = forms.ChoiceField(
-        choices=[('', '---------')] + Continent.CONTINENT_CHOICES,
-        widget=forms.Select(attrs={'class': 'form-control'})
+    continent = forms.ModelChoiceField(
+        queryset=Continent.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        empty_label='---------'
+    )
+    country = forms.ModelChoiceField(
+        queryset=Country.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        empty_label='---------'
     )
     class Meta:
         model = Post
         fields = ['continent', 'country', 'title', 'content', 'images']
         widgets = {
-            'continent': forms.Select(attrs={'class': 'form-control'}),
-            'country': forms.TextInput(attrs={'class': 'form-control'}),
+            #'continent': forms.Select(attrs={'class': 'form-control'}),
+            #'country': forms.TextInput(attrs={'class': 'form-control'}),
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
             'images': forms.ClearableFileInput(attrs={'class': 'form-control-file'}),

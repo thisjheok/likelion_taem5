@@ -80,6 +80,21 @@ CATEGORY_NAME_MAPPING = {
 }
 
 def create_post(request, site_name, category_name):
+    initial_continents = [
+        ('AS', '아시아'),
+        ('EU', '유럽'),
+        ('NA', '북아메리카'),
+        ('SA', '남아메리카'),
+        ('AF', '아프리카'),
+        ('OC', '오세아니아'),
+        ('ME', '중동')
+    ]
+
+    # Continent 객체가 없을 경우 생성
+    if not Continent.objects.exists():
+        for code, name in initial_continents:
+            Continent.objects.create(continent_name=code)
+
     site_name_kr = SITE_NAME_MAPPING.get(site_name)
     category_name_kr = CATEGORY_NAME_MAPPING.get(category_name)
     
@@ -94,12 +109,11 @@ def create_post(request, site_name, category_name):
             post.site = site
             post.category = category
             post.site_category = site_category
-            post.author = request.user
-            continent_code = form.cleaned_data['continent']
-            #post.continent, _ = Continent.objects.get_or_create(continent_name=continent_code)
-            post.continent = get_object_or_404(Continent, continent_name=continent_code)
+            #post.author = request.user
             post.save()
             return redirect('post_list', site_name=site_name, category_name=category_name)
+        else:
+            print(form.errors)
     else:
         form = PostForm()
 

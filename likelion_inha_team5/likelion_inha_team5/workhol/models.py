@@ -96,12 +96,12 @@ class Continent(models.Model):
         ('SA', '남아메리카'),
         ('AF', '아프리카'),
         ('OC', '오세아니아'),
-        ('ME', '중동'),
+        ('ME', '중동')
     ]
     continent_name = models.CharField(max_length=10, choices=CONTINENT_CHOICES, unique=True)
 
     def __str__(self):
-        return self.continent_name_display()
+        return self.get_continent_name_display()
 
 class Country(models.Model):
     continent = models.ForeignKey(Continent, on_delete=models.SET_NULL, null=True)
