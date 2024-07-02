@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import MyUser
+from .models import *
+from .serializer import *
 
 @admin.register(MyUser)
 class MyUserAdmin(admin.ModelAdmin):
@@ -13,3 +14,8 @@ class MyUserAdmin(admin.ModelAdmin):
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
+
+admin.site.register(Post)
+admin.site.register(Site)
+admin.site.register(Category)
+admin.site.register(SiteCategory)
