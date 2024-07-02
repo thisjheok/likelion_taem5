@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.utils import timezone
+from django.dispatch import receiver
+from django.db.models.signals import post_migrate
 
 class MyUserManager(BaseUserManager):
     def create_user(self, id, email, password=None, **extra_fields):
@@ -56,3 +58,94 @@ class MyUser(AbstractUser):
 
     def __str__(self):
         return self.id
+
+
+class Site(models.Model):
+    SITE_CHOICES = [
+        ('intern', '해외취업'),
+        ('language-study', '어학연수'),
+        ('working-holiday', '워킹홀리데이'),
+    ]
+    site_name = models.CharField(max_length=15, choices=SITE_CHOICES, unique=True)
+    
+    def __str__(self):
+        return self.get_site_name_display()
+
+
+class Category(models.Model):
+    CATEGORY_CHOICES = [
+        ('community', '커뮤니티'),
+        ('group-buying', '공구'),
+        ('agency-document', '대행, 서류작성'),
+        ('info', '정보'),
+    ]
+    category_name = models.CharField(max_length=15, choices=CATEGORY_CHOICES, unique=True)
+
+    def __str__(self):
+        return self.get_category_name_display()
+
+class SiteCategory(models.Model):
+    site = models.ForeignKey(Site, on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
+
+class Continent(models.Model):
+    CONTINENT_CHOICES = [
+        ('AS', '아시아'),
+        ('EU', '유럽'),
+        ('NA', '북아메리카'),
+        ('SA', '남아메리카'),
+        ('AF', '아프리카'),
+        ('OC', '오세아니아'),
+        ('ME', '중동')
+    ]
+    continent_name = models.CharField(max_length=10, choices=CONTINENT_CHOICES, unique=True)
+
+    def __str__(self):
+        return self.get_continent_name_display()
+
+class Country(models.Model):
+    continent = models.ForeignKey(Continent, on_delete=models.SET_NULL, null=True)
+    country_name = models.CharField(max_length=255, unique=True)
+
+    def __str__(self):
+        return self.country_name
+
+class Post(models.Model):
+    country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
+    continent = models.ForeignKey(Continent, on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey(MyUser, on_delete=models.SET_NULL, null=True)
+    site_category = models.ForeignKey(SiteCategory, on_delete=models.SET_NULL, null=True)
+    site = models.ForeignKey(Site, on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    images = models.ImageField(upload_to='images/', blank=True, null=True)
+    create_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    likes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.title
+
+# # Signals to create Site and Category objects after migration
+# @receiver(post_migrate)
+# def create_site_and_category_choices(sender, **kwargs):
+#     if sender.name == 'your_app_name':  # Replace with your app name
+#         site_choices = [
+#             ('intern', '해외취업'),
+#             ('language-study', '어학연수'),
+#             ('working-holiday', '워킹홀리데이'),
+#         ]
+
+#         category_choices = [
+#             ('community', '커뮤니티'),
+#             ('group-buying', '공구'),
+#             ('agency-document', '대행, 서류작성'),
+#             ('info', '정보'),
+#         ]
+
+#         for code, name in site_choices:
+#             Site.objects.get_or_create(site_name=code)
+
+#         for code, name in category_choices:
+#             Category.objects.get_or_create(category_name=code)

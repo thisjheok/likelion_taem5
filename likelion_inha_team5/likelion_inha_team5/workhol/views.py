@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
 import json
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from .models import *
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import login, authenticate
@@ -9,7 +9,15 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.utils import timezone
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
-from .forms import SignUpForm, LoginForm
+from .forms import *
+
+from rest_framework.decorators import api_view
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from rest_framework import status
+
+from .serializer import *
 
 def signup(request):
     if request.method == 'POST':
@@ -56,3 +64,62 @@ def language_study_site(request):
 def intern_site(request):
     return render(request, 'workhol/intern_site.html')
 
+
+# 사이트 이름과 카테고리 이름 매핑
+SITE_NAME_MAPPING = {
+    'intern': '해외취업',
+    'language-study': '어학연수',
+    'working-holiday': '워킹홀리데이',
+}
+
+CATEGORY_NAME_MAPPING = {
+    'community': '커뮤니티',
+    'group-buying': '공구',
+    'agency-document': '대행, 서류작성',
+    'info': '정보',
+}
+
+def create_post(request, site_name, category_name):
+    initial_continents = [
+        ('AS', '아시아'),
+        ('EU', '유럽'),
+        ('NA', '북아메리카'),
+        ('SA', '남아메리카'),
+        ('AF', '아프리카'),
+        ('OC', '오세아니아'),
+        ('ME', '중동')
+    ]
+
+    # Continent 객체가 없을 경우 생성
+    if not Continent.objects.exists():
+        for code, name in initial_continents:
+            Continent.objects.create(continent_name=code)
+
+    site_name_kr = SITE_NAME_MAPPING.get(site_name)
+    category_name_kr = CATEGORY_NAME_MAPPING.get(category_name)
+    
+    site, _ = Site.objects.get_or_create(site_name=site_name)
+    category, _ = Category.objects.get_or_create(category_name=category_name)
+    site_category,_ =SiteCategory.objects.get_or_create(site=site,category=category)
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.site = site
+            post.category = category
+            post.site_category = site_category
+            #post.author = request.user
+            post.save()
+            return redirect('post_list', site_name=site_name, category_name=category_name)
+        else:
+            print(form.errors)
+    else:
+        form = PostForm()
+
+    context = {
+        'form': form,
+        'site_name': site_name,
+        'category_name': category_name,
+    }
+    return render(request, 'workhol/create_post.html', context)
