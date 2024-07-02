@@ -123,3 +123,12 @@ def create_post(request, site_name, category_name):
         'category_name': category_name,
     }
     return render(request, 'workhol/create_post.html', context)
+
+
+# 좋아요 누르기 기능 추가
+@api_view(['PATCH'])
+def press_like(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.likes += 1  # 좋아요 수를 1 증가
+    post.save()
+    return Response({'message': f'{pk}의 총 좋아요 수는 {post.likes}입니다.'}, status=status.HTTP_200_OK)
