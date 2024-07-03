@@ -164,3 +164,51 @@ def post_delete(request, site_name, category_name, id):
         return redirect('post_list', site_name=site_name, category_name=category_name)
     
     return render(request, 'workhol/post_confirm_delete.html', {'post': post})
+
+# 좋아요 누르기 기능 추가
+@api_view(['PATCH'])
+def press_like(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.likes += 1  # 좋아요 수를 1 증가
+    post.save()
+    return Response({'message': f'{pk}의 총 좋아요 수는 {post.likes}입니다.'}, status=status.HTTP_200_OK)
+
+
+
+# 댓글 작성 기능 추가
+def create_comments(request,pk):
+    post = get_object_or_404(Post, pk=pk)
+    comments = post.comments.all()
+    if request.method == 'POST':
+        form = CommentsForm(request.POST, request.FILES)        
+        if form.is_valid():
+            comments = form.save(commit=False)
+            comments.post = post
+            comments.save()
+            return redirect('create_comments',pk=pk)
+        else:
+            print(form.errors)
+    else:
+        form = CommentsForm()
+
+    context = {
+        'form': form,
+        'post': post,
+    }
+    return render(request, 'workhol/create_comments.html', context)
+
+# 댓글 삭제 기능 추가
+def delete_comments(request, pk):
+    if request.method == 'DELETE':
+        comments=get_object_or_404(Comments, pk=pk)
+        comments.delete()
+        return JsonResponse({'message':"댓글이 삭제되었습니다"})
+    
+# 댓글 수정 기능 추가
+def update_comments(request, pk):
+    if request.method == 'PUT':
+        comments=get_object_or_404(Comments,pk=pk)
+        data=json.loads(request.body)
+        comments.content=data.get('content')
+        comments.save()
+        return JsonResponse({"message":'댓글이 수정되었습니다'})
