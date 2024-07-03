@@ -109,7 +109,8 @@ def create_post(request, site_name, category_name):
             post.site = site
             post.category = category
             post.site_category = site_category
-            #post.author = request.user
+            post.author = request.user
+            request.user.point += 50
             post.save()
             return redirect('post_list', site_name=site_name, category_name=category_name)
         else:
@@ -184,6 +185,7 @@ def create_comments(request,pk):
         if form.is_valid():
             comments = form.save(commit=False)
             comments.post = post
+            request.user.point += 10
             comments.save()
             return redirect('create_comments',pk=pk)
         else:

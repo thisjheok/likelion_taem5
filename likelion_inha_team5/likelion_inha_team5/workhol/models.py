@@ -34,6 +34,7 @@ class MyUser(AbstractUser):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
+    point = models.IntegerField(default=100)
 
     groups = models.ManyToManyField(
         'auth.Group',
