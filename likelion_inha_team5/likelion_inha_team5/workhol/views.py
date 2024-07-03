@@ -393,4 +393,4 @@ def update_comments(request, pk):
         data = json.loads(request.body)
         comments.content = data.get('content')
         comments.save()
-        return JsonResponse({"message": '댓글이 수정되었습니다'})
+        return JsonResponse({"message":'댓글이 수정되었습니다'})
