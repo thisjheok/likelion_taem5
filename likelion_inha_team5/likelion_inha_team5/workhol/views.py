@@ -199,14 +199,18 @@ def create_comments(request,pk):
 
 # 댓글 삭제 기능 추가
 def delete_comments(request, pk):
-    if request.method == 'DELETE':
+    if request.user != comments.author:
+        return HttpResponseForbidden("You are not allowed to delete this post")
+    if request.method == 'POST':
         comments=get_object_or_404(Comments, pk=pk)
         comments.delete()
         return JsonResponse({'message':"댓글이 삭제되었습니다"})
     
 # 댓글 수정 기능 추가
 def update_comments(request, pk):
-    if request.method == 'PUT':
+    if request.user != comments.author:
+        return HttpResponseForbidden("You are not allowed to delete this post")
+    if request.method == 'POST':
         comments=get_object_or_404(Comments,pk=pk)
         data=json.loads(request.body)
         comments.content=data.get('content')
