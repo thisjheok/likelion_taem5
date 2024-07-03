@@ -45,8 +45,6 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['continent', 'country', 'title', 'content', 'images']
         widgets = {
-            #'continent': forms.Select(attrs={'class': 'form-control'}),
-            #'country': forms.TextInput(attrs={'class': 'form-control'}),
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
             'images': forms.ClearableFileInput(attrs={'class': 'form-control-file'}),
@@ -54,8 +52,3 @@ class PostForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(PostForm, self).__init__(*args, **kwargs)
-        #self.fields['continent'].queryset = Continent.objects.all()    
-    # def __init__(self, *args, **kwargs):
-    #     super(PostForm, self).__init__(*args, **kwargs)
-    #     self.fields['continent'].queryset = Continent.objects.all()
-    #     self.fields['country'].queryset = Country.objects.all()

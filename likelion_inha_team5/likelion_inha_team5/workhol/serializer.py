@@ -17,3 +17,9 @@ from .models import *
 #     class Meta:
 #         model = Post
 #         fields = ['continent', 'country', 'title', 'content', 'images']
+
+
+class PostListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ['continent', 'country', 'title', 'author', 'created_at', 'updated_at']
