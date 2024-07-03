@@ -120,12 +120,13 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     images = models.ImageField(upload_to='images/', blank=True, null=True)
-    create_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     likes = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title
+
 class Comments(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,related_name='comments')
     author = models.ForeignKey(MyUser, on_delete=models.SET_NULL, null=True)
@@ -135,27 +136,3 @@ class Comments(models.Model):
 
     def __str__(self):
         return self.content
-
-
-# # Signals to create Site and Category objects after migration
-# @receiver(post_migrate)
-# def create_site_and_category_choices(sender, **kwargs):
-#     if sender.name == 'your_app_name':  # Replace with your app name
-#         site_choices = [
-#             ('intern', '해외취업'),
-#             ('language-study', '어학연수'),
-#             ('working-holiday', '워킹홀리데이'),
-#         ]
-
-#         category_choices = [
-#             ('community', '커뮤니티'),
-#             ('group-buying', '공구'),
-#             ('agency-document', '대행, 서류작성'),
-#             ('info', '정보'),
-#         ]
-
-#         for code, name in site_choices:
-#             Site.objects.get_or_create(site_name=code)
-
-#         for code, name in category_choices:
-#             Category.objects.get_or_create(category_name=code)

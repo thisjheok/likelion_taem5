@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>게시글 수정</title>
+</head>
+<body>
+    <h1>게시글 수정</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">수정하기</button>
+    </form>
+    <a href="{% url 'post_detail' site_name=post.site.site_name category_name=post.category.category_name id=post.id %}">취소</a>
+</body>
+</html>

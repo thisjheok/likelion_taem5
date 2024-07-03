@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p><strong>대륙:</strong> {{ post.continent }}</p>
+    <p><strong>나라:</strong> {{ post.country }}</p>
+    <p><strong>작성자:</strong> {{ post.author }}</p>
+    <p><strong>생성일:</strong> {{ post.created_at }}</p>
+    <p><strong>수정일:</strong> {{ post.updated_at }}</p>
+    <p><strong>내용:</strong> {{ post.content }}</p>
+    {% if post.images %}
+        <p><strong>사진:</strong></p>
+        <img src="{{ post.images.url }}" alt="{{ post.title }}">
+    {% endif %}
+    <a href="{% url 'post_list' site_name=post.site.site_name category_name=post.category.category_name %}">목록으로 돌아가기</a>
+
+     <!-- 수정 및 삭제 버튼 -->
+    <a href="{% url 'post_update' site_name=post.site.site_name category_name=post.category.category_name id=post.id %}">수정</a>
+    <form action="{% url 'post_delete' site_name=post.site.site_name category_name=post.category.category_name id=post.id %}" method="POST" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" onclick="return confirm('정말로 이 게시글을 삭제하시겠습니까?')">삭제</button>
+    </form>
+</body>
+</html>

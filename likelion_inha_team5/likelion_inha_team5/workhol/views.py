@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
 import json
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse, HttpResponse, HttpResponseForbidden
 from .models import *
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import login, authenticate
@@ -50,7 +50,7 @@ def login_view(request):
                 return redirect('home')  # 로그인 후 이동할 페이지
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'workhol/login.html', {'form': form})
 
 def home(request):
     return render(request, 'workhol/home.html')
@@ -124,14 +124,47 @@ def create_post(request, site_name, category_name):
     }
     return render(request, 'workhol/create_post.html', context)
 
+
 def post_list(request, site_name, category_name):
-    posts = Post.objects.filter(site__site_name=site_name, category__category_name=category_name)
-    context = {
-        'posts': posts,
-        'site_name': site_name,
-        'category_name': category_name,
-    }
-    return render(request, 'workhol/post_list.html', context)
+    site = get_object_or_404(Site, site_name=site_name)
+    category = get_object_or_404(Category, category_name=category_name)
+    posts = Post.objects.filter(site=site, category=category)
+    return render(request, 'workhol/post_list.html', {'posts': posts, 'site_name': site_name, 'category_name': category_name})
+
+def post_detail(request, site_name, category_name, id):
+    site = get_object_or_404(Site, site_name=site_name)
+    category = get_object_or_404(Category, category_name=category_name)
+    post = get_object_or_404(Post, site=site, category=category, id=id)
+    return render(request, 'workhol/post_detail.html', {'post': post})
+
+def post_update(request, site_name, category_name, id):
+    post = get_object_or_404(Post, id=id, site__site_name=site_name, category__category_name=category_name)
+    if request.user != post.author:
+        return redirect('post_detail', site_name=site_name, category_name=category_name, id=id)
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('post_detail', site_name=site_name, category_name=category_name, id=id)
+    else:
+        form = PostForm(instance=post)
+    
+    return render(request, 'workhol/post_update.html', {'form': form})
+
+def post_delete(request, site_name, category_name, id):
+    post = get_object_or_404(Post, id=id, site__site_name=site_name, category__category_name=category_name)
+    if request.user != post.author:
+        return HttpResponseForbidden("You are not allowed to delete this post")
+
+    if request.method == 'POST':
+        # HTML에서는 DELETE 메서드를 직접 사용할 수 X
+        # 그래서 POST 메서드로 삭제 요청함
+        post.delete()
+        return redirect('post_list', site_name=site_name, category_name=category_name)
+    
+    return render(request, 'workhol/post_confirm_delete.html', {'post': post})
+
 # 좋아요 누르기 기능 추가
 @api_view(['PATCH'])
 def press_like(request, pk):
