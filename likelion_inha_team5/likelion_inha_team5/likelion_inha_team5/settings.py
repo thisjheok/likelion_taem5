@@ -44,12 +44,12 @@ MIDDLEWARE = [
 ]
 
 # 오류뜨는 것 같아 주석처리
-# CORS_ALLOW_ALL_ORIGINS = True # all 추가
+CORS_ALLOW_ALL_ORIGINS = True # all 추가
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # 프론트엔드 개발 서버 주소
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",  # 프론트엔드 개발 서버 주소
+# ]
 
 
 # 추가 설정
