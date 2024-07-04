@@ -45,6 +45,28 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True # all 추가
 
+# 추가 설정
+CORS_ALLOW_CREDENTIALS = True  # 자격 증명 허용
+
+CORS_ALLOW_HEADERS = ['*']
+
+#아래는 오류났던 코드
+# CORS_ALLOW_HEADERS = [
+#     'authorization',
+#     'content-type',
+#     'x-csrftoken',
+#     'x-requested-with',
+# ]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
 ROOT_URLCONF = "likelion_inha_team5.urls"
 
 TEMPLATES = [
@@ -119,21 +141,3 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
-# 추가 설정
-CORS_ALLOW_CREDENTIALS = True  # 자격 증명 허용
-
-CORS_ALLOW_HEADERS = [
-    'authorization',
-    'content-type',
-    'x-csrftoken',
-    'x-requested-with',
-]
-
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
