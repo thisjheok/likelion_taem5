@@ -38,4 +38,4 @@ class CommentsSerializer(serializers.ModelSerializer):
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = MyUser
-        fields = ['email', 'username', 'birth_date', 'gender', 'phone_number']
+        fields = ['email', 'username', 'birth_date', 'gender', 'phone_number', 'point']
