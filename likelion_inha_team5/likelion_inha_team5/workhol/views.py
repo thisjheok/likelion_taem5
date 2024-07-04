@@ -44,7 +44,7 @@ CATEGORY_NAME_MAPPING = {
 )
 
 
-@api_view([ 'POST']) #추가
+@api_view(['POST']) #추가
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.data)  # request.POST 대신 request.data를 사용
