@@ -45,27 +45,22 @@ CATEGORY_NAME_MAPPING = {
     }
 )
 
-@method_decorator(csrf_exempt, name='dispatch')
-@api_view(['GET', 'POST']) #추가
+
+@api_view([ 'POST']) #추가
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.data)  # request.POST 대신 request.data를 사용
         if form.is_valid():
             user = form.save(commit=False)
             user.set_password(form.cleaned_data['password'])
             user.save()
-            id = form.cleaned_data.get('id')
-            password = form.cleaned_data.get('password')
-            user = authenticate(id=id, password=password)
-            
-            if user is not None:
-                return JsonResponse({"message":"Signup successful"})
-            #    login(request, user)
-            #    return redirect('home')
+            login(request, user)  # 회원가입 후 자동으로 로그인
+            return JsonResponse({"message": "Signup successful"}, status=201)
+        else:
+            errors = dict(form.errors.items())
+            return JsonResponse({"error": errors}, status=400)
     else:
-        form = SignUpForm()
-    return JsonResponse({"error":"Invalid request method"}, status=400)
-    #return render(request, 'workhol/signup.html', {'form': form})
+        return JsonResponse({"error": "Invalid request method"}, status=405)
 
 # 로그인
 @swagger_auto_schema(
