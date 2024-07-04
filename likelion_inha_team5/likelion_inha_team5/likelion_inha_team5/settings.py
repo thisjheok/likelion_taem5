@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True # all 추가
 
 ROOT_URLCONF = "likelion_inha_team5.urls"
 
