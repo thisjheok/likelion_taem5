@@ -17,7 +17,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from rest_framework.decorators import api_view #추가
 from drf_yasg.utils import swagger_auto_schema #추가
-
+from django.http import JsonResponse
 # 사이트 이름과 카테고리 이름 매핑
 SITE_NAME_MAPPING = {
     'intern': '해외취업',
@@ -46,7 +46,7 @@ CATEGORY_NAME_MAPPING = {
 )
 
 
-@api_view([ 'POST']) #추가
+@api_view(['POST']) #추가
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.data)  # request.POST 대신 request.data를 사용
