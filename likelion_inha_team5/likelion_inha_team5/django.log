@@ -2408,3 +2408,1650 @@ django.db.utils.OperationalError: no such column: workhol_myuser.point
 [pid: 4398|app: 0|req: 205/205] 218.159.222.184 () {44 vars in 932 bytes} [Thu Jul  4 01:19:48 2024] GET /admin/workhol/post/2/change/ => generated 631739 bytes in 192 msecs (HTTP/1.1 500) 7 headers in 243 bytes (2 switches on core 0)
 [pid: 4398|app: 0|req: 206/206] 218.159.222.184 () {46 vars in 963 bytes} [Thu Jul  4 01:23:14 2024] GET /admin/workhol/post/2/change/ => generated 22737 bytes in 42 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
 [pid: 4398|app: 0|req: 207/207] 218.159.222.184 () {42 vars in 744 bytes} [Thu Jul  4 01:23:14 2024] GET /admin/jsi18n/ => generated 9861 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 208/208] 218.159.222.184 () {42 vars in 853 bytes} [Thu Jul  4 01:24:57 2024] GET /intern/community/ => generated 1570 bytes in 10 msecs (HTTP/1.1 200) 8 headers in 251 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 209/209] 218.159.222.184 () {46 vars in 893 bytes} [Thu Jul  4 01:26:01 2024] GET /admin/ => generated 11794 bytes in 15 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 210/210] 218.159.222.184 () {44 vars in 909 bytes} [Thu Jul  4 01:26:04 2024] GET /admin/workhol/category/ => generated 10349 bytes in 16 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 211/211] 218.159.222.184 () {42 vars in 739 bytes} [Thu Jul  4 01:26:04 2024] GET /admin/jsi18n/ => generated 9861 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 212/212] 218.159.222.184 () {44 vars in 926 bytes} [Thu Jul  4 01:26:05 2024] GET /admin/workhol/comments/ => generated 9001 bytes in 17 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 213/213] 218.159.222.184 () {42 vars in 739 bytes} [Thu Jul  4 01:26:05 2024] GET /admin/jsi18n/ => generated 9861 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 214/214] 218.159.222.184 () {44 vars in 918 bytes} [Thu Jul  4 01:26:07 2024] GET /admin/workhol/post/ => generated 10576 bytes in 45 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 215/215] 218.159.222.184 () {42 vars in 735 bytes} [Thu Jul  4 01:26:07 2024] GET /admin/jsi18n/ => generated 9861 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 216/216] 218.159.222.184 () {44 vars in 918 bytes} [Thu Jul  4 01:26:08 2024] GET /admin/workhol/myuser/ => generated 12710 bytes in 20 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 217/217] 218.159.222.184 () {42 vars in 737 bytes} [Thu Jul  4 01:26:08 2024] GET /admin/jsi18n/ => generated 9861 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 218/218] 218.159.222.184 () {44 vars in 910 bytes} [Thu Jul  4 01:26:10 2024] GET /admin/auth/user/ => generated 13444 bytes in 24 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 219/219] 218.159.222.184 () {42 vars in 732 bytes} [Thu Jul  4 01:26:10 2024] GET /admin/jsi18n/ => generated 9861 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 220/220] 218.159.222.184 () {44 vars in 911 bytes} [Thu Jul  4 01:26:17 2024] GET /admin/workhol/site/ => generated 10309 bytes in 17 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 221/221] 218.159.222.184 () {42 vars in 735 bytes} [Thu Jul  4 01:26:18 2024] GET /admin/jsi18n/ => generated 9861 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 222/222] 211.231.103.92 () {40 vars in 568 bytes} [Thu Jul  4 01:43:19 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 223/223] 218.159.222.184 () {40 vars in 691 bytes} [Thu Jul  4 01:43:22 2024] GET /swagger/ => generated 2189 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 224/224] 218.159.222.184 () {42 vars in 772 bytes} [Thu Jul  4 01:43:22 2024] GET /swagger/?format=openapi => generated 7994 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 272 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 225/225] 44.196.175.104 () {36 vars in 471 bytes} [Thu Jul  4 01:43:24 2024] GET /swagger/?format=openapi => generated 7994 bytes in 12 msecs (HTTP/1.1 200) 8 headers in 272 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon.png
+[pid: 4398|app: 0|req: 226/226] 218.159.222.184 () {38 vars in 538 bytes} [Thu Jul  4 01:51:17 2024] GET /apple-touch-icon.png => generated 5622 bytes in 7 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 4398|app: 0|req: 227/227] 218.159.222.184 () {38 vars in 520 bytes} [Thu Jul  4 01:51:17 2024] GET /favicon.ico => generated 5595 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon-precomposed.png
+[pid: 4398|app: 0|req: 228/228] 218.159.222.184 () {38 vars in 562 bytes} [Thu Jul  4 01:51:17 2024] GET /apple-touch-icon-precomposed.png => generated 5658 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon-precomposed.png
+[pid: 4398|app: 0|req: 229/229] 218.159.222.184 () {38 vars in 562 bytes} [Thu Jul  4 01:51:17 2024] GET /apple-touch-icon-precomposed.png => generated 5658 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon.png
+[pid: 4398|app: 0|req: 230/230] 218.159.222.184 () {38 vars in 538 bytes} [Thu Jul  4 01:51:17 2024] GET /apple-touch-icon.png => generated 5622 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 4398|app: 0|req: 231/231] 218.159.222.184 () {38 vars in 520 bytes} [Thu Jul  4 01:51:17 2024] GET /favicon.ico => generated 5595 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 232/232] 218.159.222.184 () {40 vars in 705 bytes} [Thu Jul  4 01:51:18 2024] GET /swagger/ => generated 2189 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 233/233] 218.159.222.184 () {40 vars in 705 bytes} [Thu Jul  4 01:51:18 2024] GET /swagger/ => generated 2189 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 234/234] 218.159.222.184 () {40 vars in 691 bytes} [Thu Jul  4 01:51:19 2024] GET /swagger/ => generated 2189 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 235/235] 218.159.222.184 () {42 vars in 772 bytes} [Thu Jul  4 01:51:19 2024] GET /swagger/?format=openapi => generated 7994 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 272 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 236/236] 44.196.175.104 () {36 vars in 471 bytes} [Thu Jul  4 01:51:20 2024] GET /swagger/?format=openapi => generated 7994 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 272 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 4398|app: 0|req: 237/237] 218.159.222.184 () {38 vars in 520 bytes} [Thu Jul  4 01:51:59 2024] GET /favicon.ico => generated 5595 bytes in 7 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon-precomposed.png
+[pid: 4398|app: 0|req: 238/238] 218.159.222.184 () {38 vars in 562 bytes} [Thu Jul  4 01:51:59 2024] GET /apple-touch-icon-precomposed.png => generated 5658 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon-precomposed.png
+[pid: 4398|app: 0|req: 239/239] 218.159.222.184 () {38 vars in 562 bytes} [Thu Jul  4 01:51:59 2024] GET /apple-touch-icon-precomposed.png => generated 5658 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon.png
+[pid: 4398|app: 0|req: 240/240] 218.159.222.184 () {38 vars in 538 bytes} [Thu Jul  4 01:51:59 2024] GET /apple-touch-icon.png => generated 5622 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 4398|app: 0|req: 241/241] 218.159.222.184 () {38 vars in 520 bytes} [Thu Jul  4 01:51:59 2024] GET /favicon.ico => generated 5595 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon.png
+[pid: 4398|app: 0|req: 242/242] 218.159.222.184 () {38 vars in 538 bytes} [Thu Jul  4 01:51:59 2024] GET /apple-touch-icon.png => generated 5622 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 243/243] 218.159.222.184 () {40 vars in 705 bytes} [Thu Jul  4 01:52:00 2024] GET /swagger/ => generated 2189 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 244/244] 218.159.222.184 () {40 vars in 705 bytes} [Thu Jul  4 01:52:00 2024] GET /swagger/ => generated 2189 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 245/245] 218.159.222.184 () {40 vars in 675 bytes} [Thu Jul  4 01:52:02 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon-precomposed.png
+[pid: 4398|app: 0|req: 246/246] 218.159.222.184 () {38 vars in 562 bytes} [Thu Jul  4 01:52:04 2024] GET /apple-touch-icon-precomposed.png => generated 5658 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 4398|app: 0|req: 247/247] 218.159.222.184 () {38 vars in 520 bytes} [Thu Jul  4 01:52:04 2024] GET /favicon.ico => generated 5595 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /apple-touch-icon.png
+[pid: 4398|app: 0|req: 248/248] 218.159.222.184 () {38 vars in 538 bytes} [Thu Jul  4 01:52:04 2024] GET /apple-touch-icon.png => generated 5622 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 249/249] 218.159.222.184 () {40 vars in 689 bytes} [Thu Jul  4 01:52:04 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 250/250] 211.231.103.106 () {40 vars in 537 bytes} [Thu Jul  4 02:14:27 2024] GET /swagger/ => generated 2189 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 251/251] 122.47.151.227 () {40 vars in 751 bytes} [Thu Jul  4 02:14:30 2024] GET /swagger/ => generated 2189 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 252/252] 122.47.151.227 () {42 vars in 760 bytes} [Thu Jul  4 02:14:30 2024] GET /swagger/?format=openapi => generated 7994 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 272 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 253/253] 44.196.175.104 () {36 vars in 471 bytes} [Thu Jul  4 02:14:31 2024] GET /swagger/?format=openapi => generated 7994 bytes in 12 msecs (HTTP/1.1 200) 8 headers in 272 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 254/254] 122.47.151.227 () {46 vars in 785 bytes} [Thu Jul  4 02:16:01 2024] POST /login/ => generated 698 bytes in 5 msecs (HTTP/1.1 200) 8 headers in 256 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 255/255] 122.47.151.227 () {46 vars in 787 bytes} [Thu Jul  4 02:17:56 2024] POST /signup/ => generated 3107 bytes in 10 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 256/256] 122.47.151.227 () {46 vars in 787 bytes} [Thu Jul  4 02:19:59 2024] POST /signup/ => generated 3107 bytes in 7 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 257/257] 122.47.151.227 () {46 vars in 787 bytes} [Thu Jul  4 02:20:00 2024] POST /signup/ => generated 3107 bytes in 8 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 258/258] 122.47.151.227 () {48 vars in 780 bytes} [Thu Jul  4 02:30:27 2024] OPTIONS /signup/ => generated 165 bytes in 1 msecs (HTTP/1.1 200) 8 headers in 248 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 259/259] 122.47.151.227 () {48 vars in 780 bytes} [Thu Jul  4 02:35:26 2024] OPTIONS /signup/ => generated 165 bytes in 1 msecs (HTTP/1.1 200) 8 headers in 248 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 260/260] 122.47.151.227 () {48 vars in 780 bytes} [Thu Jul  4 02:35:31 2024] OPTIONS /signup/ => generated 165 bytes in 3 msecs (HTTP/1.1 200) 8 headers in 248 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 261/261] 122.47.151.227 () {48 vars in 780 bytes} [Thu Jul  4 02:36:15 2024] OPTIONS /signup/ => generated 165 bytes in 1 msecs (HTTP/1.1 200) 8 headers in 248 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 262/262] 44.220.90.120 () {36 vars in 439 bytes} [Thu Jul  4 02:45:14 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 263/263] 27.0.238.70 () {40 vars in 526 bytes} [Thu Jul  4 02:56:02 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 264/264] 34.239.169.51 () {36 vars in 513 bytes} [Thu Jul  4 03:55:38 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 265/265] 34.239.169.51 () {36 vars in 450 bytes} [Thu Jul  4 03:56:08 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /.js
+[pid: 4398|app: 0|req: 266/266] 34.239.169.51 () {36 vars in 497 bytes} [Thu Jul  4 03:56:08 2024] GET /.js => generated 5571 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /.js
+[pid: 4398|app: 0|req: 267/267] 34.239.169.51 () {36 vars in 507 bytes} [Thu Jul  4 03:56:53 2024] GET /.js => generated 5571 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 268/268] 34.239.169.51 () {36 vars in 452 bytes} [Thu Jul  4 03:56:53 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 269/269] 124.158.218.86 () {28 vars in 289 bytes} [Thu Jul  4 04:53:46 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 270/270] 77.90.7.23 () {34 vars in 371 bytes} [Thu Jul  4 05:22:58 2024] GET / => generated 5541 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 271/271] 77.90.7.23 () {34 vars in 371 bytes} [Thu Jul  4 05:23:00 2024] GET / => generated 5541 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '_'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '_'. The domain name provided is not valid according to RFC 1034/1035.
+Bad Request: /
+[pid: 4398|app: 0|req: 272/272] 198.235.24.11 () {30 vars in 567 bytes} [Thu Jul  4 06:38:15 2024] GET / => generated 57783 bytes in 25 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 273/273] 211.231.103.106 () {40 vars in 569 bytes} [Thu Jul  4 06:59:41 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /.env
+[pid: 4398|app: 0|req: 274/274] 185.254.196.173 () {36 vars in 506 bytes} [Thu Jul  4 07:02:35 2024] GET /.env => generated 5574 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 275/275] 45.33.109.10 () {34 vars in 373 bytes} [Thu Jul  4 07:07:18 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 276/276] 172.104.11.46 () {34 vars in 467 bytes} [Thu Jul  4 07:07:33 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 277/277] 43.131.59.56 () {36 vars in 504 bytes} [Thu Jul  4 07:11:22 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 278/278] 77.90.7.23 () {34 vars in 371 bytes} [Thu Jul  4 07:28:55 2024] GET / => generated 5541 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 279/279] 77.90.7.23 () {34 vars in 371 bytes} [Thu Jul  4 07:28:57 2024] GET / => generated 5541 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 280/280] 216.24.212.11 () {36 vars in 562 bytes} [Thu Jul  4 08:01:40 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /.env
+[pid: 4398|app: 0|req: 281/281] 216.24.212.78 () {36 vars in 570 bytes} [Thu Jul  4 08:01:41 2024] GET /.env => generated 5574 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 282/282] 216.24.212.37 () {40 vars in 677 bytes} [Thu Jul  4 08:01:42 2024] POST / => generated 5545 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 283/283] 216.24.212.47 () {36 vars in 460 bytes} [Thu Jul  4 08:01:42 2024] GET /?%3Cplay%3Ewithme%3C/%3E => generated 5568 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 284/284] 216.24.212.20 () {36 vars in 596 bytes} [Thu Jul  4 08:01:43 2024] GET /_profiler/phpinfo => generated 0 bytes in 6 msecs (HTTP/1.1 301) 5 headers in 209 bytes (1 switches on core 0)
+Not Found: /debug/default/view
+[pid: 4398|app: 0|req: 285/285] 216.24.212.34 () {36 vars in 623 bytes} [Thu Jul  4 08:01:44 2024] GET /debug/default/view?panel=config => generated 5629 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /config.json
+[pid: 4398|app: 0|req: 286/286] 216.24.212.34 () {36 vars in 584 bytes} [Thu Jul  4 08:01:45 2024] GET /config.json => generated 5595 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 287/287] 216.24.212.36 () {36 vars in 583 bytes} [Thu Jul  4 08:01:46 2024] GET /.git/config => generated 0 bytes in 6 msecs (HTTP/1.1 301) 5 headers in 203 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 288/288] 34.239.169.51 () {36 vars in 511 bytes} [Thu Jul  4 08:04:40 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 289/289] 34.239.169.51 () {36 vars in 516 bytes} [Thu Jul  4 08:04:54 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /.js
+[pid: 4398|app: 0|req: 290/290] 34.239.169.51 () {36 vars in 502 bytes} [Thu Jul  4 08:04:54 2024] GET /.js => generated 5571 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 291/291] 34.239.169.51 () {36 vars in 489 bytes} [Thu Jul  4 08:05:42 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /.js
+[pid: 4398|app: 0|req: 292/292] 34.239.169.51 () {36 vars in 514 bytes} [Thu Jul  4 08:05:42 2024] GET /.js => generated 5571 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 293/293] 165.154.11.48 () {32 vars in 336 bytes} [Thu Jul  4 08:26:46 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 294/294] 27.0.238.70 () {40 vars in 539 bytes} [Thu Jul  4 09:00:13 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 295/295] 147.185.132.68 () {32 vars in 608 bytes} [Thu Jul  4 09:16:46 2024] GET / => generated 5547 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 296/296] 103.174.150.130 () {28 vars in 291 bytes} [Thu Jul  4 09:57:10 2024] GET / => generated 5545 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 297/297] 43.131.59.56 () {36 vars in 495 bytes} [Thu Jul  4 10:13:40 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 298/298] 43.131.59.56 () {36 vars in 519 bytes} [Thu Jul  4 10:13:46 2024] GET /backend/.env => generated 0 bytes in 6 msecs (HTTP/1.1 301) 5 headers in 204 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 299/299] 43.131.59.56 () {40 vars in 610 bytes} [Thu Jul  4 10:13:51 2024] POST / => generated 5545 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 300/300] 211.231.103.107 () {40 vars in 569 bytes} [Thu Jul  4 10:19:38 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 301/301] 206.168.34.197 () {28 vars in 292 bytes} [Thu Jul  4 10:27:46 2024] GET / => generated 5547 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 302/302] 206.168.34.197 () {34 vars in 424 bytes} [Thu Jul  4 10:27:50 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 303/303] 95.154.117.209 () {28 vars in 289 bytes} [Thu Jul  4 10:33:56 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 304/304] 44.220.90.120 () {36 vars in 670 bytes} [Thu Jul  4 10:48:09 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 305/305] 162.142.125.222 () {28 vars in 293 bytes} [Thu Jul  4 11:10:59 2024] GET / => generated 5547 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 306/306] 162.142.125.222 () {34 vars in 425 bytes} [Thu Jul  4 11:11:03 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 307/307] 176.120.213.179 () {32 vars in 446 bytes} [Thu Jul  4 11:46:41 2024] GET / => generated 5547 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 308/308] 45.156.128.39 () {34 vars in 468 bytes} [Thu Jul  4 11:55:48 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 309/309] 27.0.238.69 () {40 vars in 526 bytes} [Thu Jul  4 11:56:24 2024] GET / => generated 5544 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 310/310] 92.15.39.60 () {32 vars in 443 bytes} [Thu Jul  4 12:28:55 2024] GET / => generated 5547 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 4398|app: 0|req: 311/311] 180.110.203.108 () {44 vars in 809 bytes} [Thu Jul  4 13:02:16 2024] GET / => generated 5544 bytes in 8 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 312/312] 218.159.222.184 () {40 vars in 748 bytes} [Thu Jul  4 13:15:47 2024] GET /swagger/ => generated 2189 bytes in 3 msecs (HTTP/1.1 200) 8 headers in 257 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 313/313] 218.159.222.184 () {42 vars in 757 bytes} [Thu Jul  4 13:15:47 2024] GET /swagger/?format=openapi => generated 7994 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 272 bytes (1 switches on core 0)
+[pid: 4398|app: 0|req: 314/314] 44.196.175.104 () {36 vars in 471 bytes} [Thu Jul  4 13:15:48 2024] GET /swagger/?format=openapi => generated 7994 bytes in 12 msecs (HTTP/1.1 200) 8 headers in 272 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.26 (64bit) on [Thu Jul  4 04:19:13 2024] ***
+compiled with version: 13.2.0 on 03 July 2024 14:58:40
+os: Linux-6.8.0-1009-aws #9-Ubuntu SMP Fri May 17 14:39:23 UTC 2024
+nodename: ip-172-31-4-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5
+writing pidfile to /tmp/project-master.pid
+detected binary path: /home/ubuntu/dasol/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5
+your processes number limit is 3769
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/uwsgi.sock fd 3
+Python version: 3.12.3 (main, Apr 10 2024, 05:33:47) [GCC 13.2.0]
+PEP 405 virtualenv detected: /home/ubuntu/dasol
+Set PythonHome to /home/ubuntu/dasol
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x7766d289ff68
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7766d289ff68 pid: 7657 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7657)
+spawned uWSGI worker 1 (pid: 7658, cores: 1)
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/corsheaders/middleware.py", line 56, in __call__
+    result = self.get_response(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/wsgi.py", line 124, in __call__
+    response = self.get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/base.py", line 140, in get_response
+    response = self._middleware_chain(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+[pid: 7658|app: 0|req: 1/1] 185.180.140.4 () {34 vars in 468 bytes} [Thu Jul  4 13:31:02 2024] GET / => generated 0 bytes in 4018 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 72, in technical_500_response
+    text = reporter.get_traceback_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 435, in get_traceback_text
+    c = Context(self.get_traceback_data(), autoescape=False, use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 72, in technical_500_response
+    text = reporter.get_traceback_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 435, in get_traceback_text
+    c = Context(self.get_traceback_data(), autoescape=False, use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 72, in technical_500_response
+    text = reporter.get_traceback_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 435, in get_traceback_text
+    c = Context(self.get_traceback_data(), autoescape=False, use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 72, in technical_500_response
+    text = reporter.get_traceback_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 435, in get_traceback_text
+    c = Context(self.get_traceback_data(), autoescape=False, use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 72, in technical_500_response
+    text = reporter.get_traceback_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 435, in get_traceback_text
+    c = Context(self.get_traceback_data(), autoescape=False, use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 72, in technical_500_response
+    text = reporter.get_traceback_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 435, in get_traceback_text
+    c = Context(self.get_traceback_data(), autoescape=False, use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/corsheaders/middleware.py", line 56, in __call__
+    result = self.get_response(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 72, in technical_500_response
+    text = reporter.get_traceback_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 435, in get_traceback_text
+    c = Context(self.get_traceback_data(), autoescape=False, use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/wsgi.py", line 124, in __call__
+    response = self.get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/base.py", line 140, in get_response
+    response = self._middleware_chain(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 72, in technical_500_response
+    text = reporter.get_traceback_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 435, in get_traceback_text
+    c = Context(self.get_traceback_data(), autoescape=False, use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 686, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/likelion_inha_team5/urls.py", line 8, in <module>
+    path('', include('workhol.urls')),  # workhol 앱의 URL들을 포함
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/urls.py", line 5, in <module>
+    from . import views
+  File "/home/ubuntu/likelion_team5/likelion_inha_team5/likelion_inha_team5/workhol/views.py", line 33, in <module>
+    @swagger_auto_schema(
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/dasol/lib/python3.12/site-packages/drf_yasg/utils.py", line 153, in decorator
+    assert available_http_methods, "`method` or `methods` can only be specified on @action or @api_view views"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `method` or `methods` can only be specified on @action or @api_view views
+[pid: 7658|app: 0|req: 2/2] 218.159.222.184 () {46 vars in 784 bytes} [Thu Jul  4 13:41:08 2024] POST /signup/ => generated 0 bytes in 3875 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)

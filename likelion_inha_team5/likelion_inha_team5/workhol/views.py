@@ -12,6 +12,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializer import *
 from drf_yasg.utils import swagger_auto_schema
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 # 사이트 이름과 카테고리 이름 매핑
 SITE_NAME_MAPPING = {
@@ -39,7 +41,8 @@ CATEGORY_NAME_MAPPING = {
         500: '서버 오류'
     }
 )
-@api_view(['GET', 'POST'])
+
+@method_decorator(csrf_exempt, name='dispatch')
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -50,12 +53,15 @@ def signup(request):
             id = form.cleaned_data.get('id')
             password = form.cleaned_data.get('password')
             user = authenticate(id=id, password=password)
+            
             if user is not None:
-                login(request, user)
-                return redirect('home')
+                return JsonResponse({"message":"Signup successful"})
+            #    login(request, user)
+            #    return redirect('home')
     else:
         form = SignUpForm()
-    return render(request, 'workhol/signup.html', {'form': form})
+    return JsonResponse({"error":"Invalid request method"}, status=400)
+    #return render(request, 'workhol/signup.html', {'form': form})
 
 # 로그인
 @swagger_auto_schema(
