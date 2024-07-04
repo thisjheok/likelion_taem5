@@ -37,7 +37,7 @@ const WorkingHoliday = () => {
     <>
       <Header />
       <BackGround>
-        <Sidebar text="워킹홀리데이"></Sidebar>
+        <Sidebar text="해외취업"></Sidebar>
         <Wrapper>
           <KeyWord />
           <SectionContainer>

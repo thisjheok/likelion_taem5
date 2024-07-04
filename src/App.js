@@ -1,8 +1,8 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation,Navigate } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { BrowserView, MobileView } from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 import styled from 'styled-components';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
@@ -18,6 +18,14 @@ import ScrollToTop from './components/ScrollTop';
 import Arrive from './pages/Arrive';
 import AbroadLife from './pages/AbroadLife';
 import LeavingInfo from './pages/LeavingInfo';
+import Intern from './pages/Intern';
+import Study from './pages/Study';
+import MobileSignUp from './pages/MobileSignUp';
+import MobileLogin from './pages/MobileLogin';
+import MobileMain from './pages/MobileMain';
+import MobilePostList from './pages/MobilePostList';
+import MobilePostRead from './pages/MobilePostRead';
+import MobileHotList from './pages/MobileHotList';
 import './App.css';  // CSS 애니메이션을 위한 파일
 
 const Container = styled.div`
@@ -28,7 +36,6 @@ const App = () => {
   const location = useLocation();
   return (
     <>
-    <BrowserView>
       <Container>
       <ScrollToTop/>
       <TransitionGroup>
@@ -46,19 +53,44 @@ const App = () => {
             <Route path="/postread" element={<PostRead/>} />  
             <Route path="/Main" element={<Main/>} />  
             <Route path="/GroupBuying" element={<GroupBuying/>}/>
-            <Route path="/CommunityPage" element={<CommunityPage/>}/>
-            <Route path="/Review" element={<Review/>}/>
+            <Route
+              path="/communitypage/:category"
+              element={<CommunityPage />}
+            />
+            <Route path="/Review/:category" element={<Review/>}/>
             <Route path="/Arrive" element={<Arrive/>}/>
             <Route path="/AbroadLife" element={<AbroadLife/>}/>
             <Route path="/LeavingInfo" element={<LeavingInfo/>}/>
+            <Route path="/Intern" element={<Intern/>}/>
+            <Route path="/Study" element={<Study/>}/>
+            <Route 
+              path="/msignup" 
+              element={isMobile ? <MobileSignUp /> : <Navigate to="/signup" replace />} 
+            />
+            <Route 
+              path="/mlogin" 
+              element={isMobile ? <MobileLogin /> : <Navigate to="/login" replace />} 
+            />
+            <Route 
+              path="/mmain" 
+              element={isMobile ? <MobileMain /> : <Navigate to="/main" replace />} 
+            />
+            <Route 
+              path="/mcommunity" 
+              element={isMobile ? <MobilePostList /> : <Navigate to="/CommunityPage" replace />} 
+            />
+            <Route 
+              path="/mhots" 
+              element={isMobile ? <MobileHotList /> : <Navigate to="/CommunityPage" replace />} 
+            />
+             <Route 
+              path="/mpostread/:type/:postId" 
+              element={isMobile ? <MobilePostRead /> : <Navigate to="/PostRead" replace />} 
+            />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
     </Container>
-    </BrowserView>
-    <MobileView>
-      mobile
-    </MobileView>
     </>
   );
 };

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import PostCard from '../components/PostCard';
+import { useParams } from "react-router-dom";
 const PageLayout = styled.div`
   display: flex;
   min-height: 100vh;
@@ -48,6 +49,8 @@ cursor: pointer;
 
 const Review = () => {
     const [posts, setPosts] = useState([]);
+    const { category } = useParams();
+    const text = category || "";
     const [sortBy, setSortBy] = useState('likes');
     const [selectedCountry, setSelectedCountry] = useState(null);
   
@@ -147,7 +150,7 @@ const Review = () => {
       <>
         <Header />
         <PageLayout>
-          <Sidebar />
+          <Sidebar text={text}/>
           <MainContent>
             <Country>국가별 후기</Country>
             <FilterButtons>
