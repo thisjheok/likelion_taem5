@@ -43,7 +43,36 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True # all 추가
+# 오류뜨는 것 같아 주석처리
+# CORS_ALLOW_ALL_ORIGINS = True # all 추가
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # 프론트엔드 개발 서버 주소
+]
+
+
+# 추가 설정
+CORS_ALLOW_CREDENTIALS = True  # 자격 증명 허용
+
+CORS_ALLOW_HEADERS = ['*']
+
+#아래는 오류났던 코드
+# CORS_ALLOW_HEADERS = [
+#     'authorization',
+#     'content-type',
+#     'x-csrftoken',
+#     'x-requested-with',
+# ]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 
 ROOT_URLCONF = "likelion_inha_team5.urls"
 
@@ -114,27 +143,4 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # 프론트엔드 개발 서버 주소
-    "http://43.200.226.225"
-]
 
-
-# 추가 설정
-CORS_ALLOW_CREDENTIALS = True  # 자격 증명 허용
-
-CORS_ALLOW_HEADERS = [
-    'authorization',
-    'content-type',
-    'x-csrftoken',
-    'x-requested-with',
-]
-
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
