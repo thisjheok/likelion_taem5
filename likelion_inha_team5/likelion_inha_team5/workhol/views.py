@@ -16,6 +16,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 
+
 # 사이트 이름과 카테고리 이름 매핑
 SITE_NAME_MAPPING = {
     'intern': '해외취업',
@@ -45,14 +46,12 @@ CATEGORY_NAME_MAPPING = {
 )
 @api_view(['POST'])
 def signup(request):
-    if request.method == 'POST':
-        serializer = SignUpSerializer(data=request.data)
-        if serializer.is_valid():
-            user = serializer.save()
-            login(request, user)  # 회원가입 후 자동으로 로그인
-            return JsonResponse({"message": "Signup successful"}, status=201)
-        return JsonResponse(serializer.errors, status=400)
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+    serializer = SignUpSerializer(data=request.data)
+    if serializer.is_valid():
+        user = serializer.save()
+        login(request, user)  # 회원가입 후 자동으로 로그인
+        return JsonResponse({"message": "Signup successful"}, status=201)
+    return JsonResponse(serializer.errors, status=400)
 
 # 로그인
 @swagger_auto_schema(
@@ -69,19 +68,18 @@ def signup(request):
 )
 @api_view(['POST'])
 def login_view(request):
-    if request.method == 'POST':
-        serializer = LoginSerializer(data=request.data)
-        if serializer.is_valid():
-            id = serializer.validated_data.get('id')
-            password = serializer.validated_data.get('password')
-            user = authenticate(request, username=id, password=password)
-            if user is not None:
-                user.last_login = timezone.now()  # 마지막 로그인 시간 갱신
-                user.save()
-                login(request, user)
-                return redirect('home')  # 로그인 후 이동할 페이지
-        return JsonResponse({"error": "Invalid credentials"}, status=400)
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+    serializer = LoginSerializer(data=request.data)
+    if serializer.is_valid():
+        id = serializer.validated_data.get('id')
+        password = serializer.validated_data.get('password')
+        user = authenticate(request, username=id, password=password)
+        if user is not None:
+            user.last_login = timezone.now()  # 마지막 로그인 시간 갱신
+            user.save()
+            login(request, user)
+            return redirect('home')  # 로그인 후 이동할 페이지
+    return JsonResponse({"error": "Invalid credentials"}, status=400)
+
 # 홈
 @swagger_auto_schema(
     method="get",
@@ -157,13 +155,31 @@ def intern_site(request):
 )
 @api_view(['POST'])
 def create_post(request, site_name, category_name):
-    if request.method == 'POST':
-        serializer = PostSerializer(data=request.data)
-        if serializer.is_valid():
-            post = serializer.save(author=request.user)
-            return JsonResponse({"message": "Post created successfully"}, status=201)
-        return JsonResponse(serializer.errors, status=400)
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+    initial_continents = [
+        ('AS', '아시아'),
+        ('EU', '유럽'),
+        ('NA', '북아메리카'),
+        ('SA', '남아메리카'),
+        ('AF', '아프리카'),
+        ('OC', '오세아니아'),
+        ('ME', '중동')
+    ]
+
+    if not Continent.objects.exists():
+        for code, name in initial_continents:
+            Continent.objects.create(continent_name=code)
+
+    site, _ = Site.objects.get_or_create(site_name=site_name)
+    category, _ = Category.objects.get_or_create(category_name=category_name)
+    site_category, _ = SiteCategory.objects.get_or_create(site=site, category=category)
+
+    serializer = PostSerializer(data=request.data)
+    if serializer.is_valid():
+        post = serializer.save(author=request.user, site=site, category=category, site_category=site_category)
+        request.user.point += 50
+        request.user.save()
+        return JsonResponse({"message": "Post created successfully"}, status=201)
+    return JsonResponse(serializer.errors, status=400)
 
 # 게시물 목록
 @swagger_auto_schema(
@@ -222,13 +238,11 @@ def post_update(request, site_name, category_name, id):
     if request.user != post.author:
         return HttpResponseForbidden("You are not allowed to update this post")
 
-    if request.method == 'POST':
-        serializer = PostSerializer(post, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse({"message": "Post updated successfully"}, status=200)
-        return JsonResponse(serializer.errors, status=400)
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+    serializer = PostSerializer(post, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return JsonResponse({"message": "Post updated successfully"}, status=200)
+    return JsonResponse(serializer.errors, status=400)
 
 # 게시물 삭제
 @swagger_auto_schema(
@@ -249,10 +263,8 @@ def post_delete(request, site_name, category_name, id):
     if request.user != post.author:
         return HttpResponseForbidden("You are not allowed to delete this post")
 
-    if request.method == 'POST':
-        post.delete()
-        return JsonResponse({"message": "Post deleted successfully"}, status=200)
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+    post.delete()
+    return JsonResponse({"message": "Post deleted successfully"}, status=200)
 
 # 좋아요 누르기 기능 추가
 @swagger_auto_schema(
@@ -291,7 +303,9 @@ def create_comments(request, pk):
     post = get_object_or_404(Post, pk=pk)
     serializer = CommentsSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save(post=post, author=request.user)
+        comments = serializer.save(post=post, author=request.user)
+        request.user.point += 10
+        request.user.save()
         return JsonResponse({"message": "Comment added successfully"}, status=201)
     return JsonResponse(serializer.errors, status=400)
 
@@ -314,10 +328,8 @@ def delete_comments(request, pk):
     if request.user != comments.author:
         return HttpResponseForbidden("You are not allowed to delete this comment")
 
-    if request.method == 'POST':
-        comments.delete()
-        return JsonResponse({"message": "Comment deleted successfully"}, status=200)
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+    comments.delete()
+    return JsonResponse({"message": "Comment deleted successfully"}, status=200)
 
 # 댓글 수정 기능 추가
 @swagger_auto_schema(
@@ -339,13 +351,11 @@ def update_comments(request, pk):
     if request.user != comments.author:
         return HttpResponseForbidden("You are not allowed to update this comment")
 
-    if request.method == 'POST':
-        serializer = CommentsSerializer(comments, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse({"message": "Comment updated successfully"}, status=200)
-        return JsonResponse(serializer.errors, status=400)
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+    serializer = CommentsSerializer(comments, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return JsonResponse({"message": "Comment updated successfully"}, status=200)
+    return JsonResponse(serializer.errors, status=400)
 
 # 회원정보 기능 추가
 @swagger_auto_schema(
