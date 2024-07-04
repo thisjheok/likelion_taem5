@@ -12,6 +12,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializer import *
 from drf_yasg.utils import swagger_auto_schema
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 
@@ -399,4 +400,41 @@ def update_comments(request, pk):
         data = json.loads(request.body)
         comments.content = data.get('content')
         comments.save()
-        return JsonResponse({"message":'댓글이 수정되었습니다'})
+        return JsonResponse({"message": '댓글이 수정되었습니다'})
+
+
+# 회원정보 기능 추가 
+
+
+@swagger_auto_schema(
+    method='get',
+    tags=['회원정보'],
+    operation_summary='회원정보 확인',
+    operation_description='회원정보와 작성한 글, 댓글을 확인합니다.',
+    responses={
+        200: '회원정보 확인 성공',
+        500: '서버 오류'
+    }
+)
+@api_view(['GET', 'POST'])
+@login_required
+def mypage(request):
+    user = request.user
+
+    posts = Post.objects.filter(author=user)
+    comments = Comments.objects.filter(author=user)
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('mypage')
+    else:
+        form = UserProfileForm(instance=user)
+
+    context = {
+        'form': form,
+        'posts': posts,
+        'comments': comments,
+    }
+    return render(request, 'workhol/mypage.html', context)
