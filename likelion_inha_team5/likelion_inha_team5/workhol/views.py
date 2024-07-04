@@ -15,9 +15,7 @@ from drf_yasg.utils import swagger_auto_schema
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-from rest_framework.decorators import api_view #추가
-from drf_yasg.utils import swagger_auto_schema #추가
-from django.http import JsonResponse
+
 # 사이트 이름과 카테고리 이름 매핑
 SITE_NAME_MAPPING = {
     'intern': '해외취업',
