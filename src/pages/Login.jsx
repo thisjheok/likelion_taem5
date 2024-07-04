@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import logoImage from '../assets/Biglogo.png';
+import axios from 'axios';
 
 const Container = styled.div`
   display: flex;
@@ -67,24 +68,64 @@ const Anchor=styled.a`
 
 const Login = () => {
   const navigate = useNavigate();
-  const sigininBtn = ()=>{
-    navigate('/Choice');
-  }
+  const [formData, setFormData] = useState({
+    username: '',
+    password: ''
+  });
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id.replace('id_', '')]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+
+    try {
+      const response = await axios.post('http://43.200.226.225/login/', formData);
+      console.log('Login successful:', response.data);
+      // 로그인 성공 시 처리 (예: 토큰 저장)
+      localStorage.setItem('token', response.data.token);
+      navigate('/Choice');
+    } catch (error) {
+      console.error('Login error:', error.response?.data || error.message);
+      setError('로그인에 실패했습니다. 아이디와 비밀번호를 확인해주세요.');
+    }
+  };
+
   return (
     <Container>
-      <Form>
-        <Title><LogoImage src={logoImage}/></Title>
+      <Form as="form" onSubmit={handleSubmit}>
+        <Title><LogoImage src={logoImage} alt="Logo" /></Title>
         <Subtitle>
           처음이신가요? <Anchor href="/SignUp">계정 만들기</Anchor>
         </Subtitle>
-        <Input type="id" placeholder="아이디"/>
-        <Input type="password" placeholder="비밀번호" />
+        {error && <p style={{color: 'red'}}>{error}</p>}
+        <Input 
+          type="text" 
+          placeholder="아이디" 
+          id="id_username"
+          value={formData.username}
+          onChange={handleChange}
+          required
+        />
+        <Input 
+          type="password" 
+          placeholder="비밀번호" 
+          id="id_password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+        />
         <Anchor href="#">비밀번호를 잊으셨나요?</Anchor>
-        <Button onClick={sigininBtn}>Sign In</Button>
+        <Button type="submit">Sign In</Button>
       </Form>
     </Container>
   );
 };
 
 export default Login;
-

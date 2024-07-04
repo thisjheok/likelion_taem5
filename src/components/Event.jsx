@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
+import { Link } from 'react-router-dom';
 
 const AdvBanner = styled.div`
   width: 890px;
   height: 120px;
   border: 0.1px solid #eff0eb;
   border-radius: 20px;
-  box-shadow: 0 0.375rem 0.75rem rgba(140, 152, 164, 0.075);
+  box-shadow: 0 0.375rem 0.375rem #fafabe;
   font-size: 20px;
   font-weight: 550;
   color: #0a124d;
@@ -62,15 +63,19 @@ const Event = () => {
         <ListTitile>
           <EventList>uSIM / eSIM 공동구매 할인 이벤트 </EventList>
           <Button>
+          <Link to="/GroupBuying">
             <SiteButton>
               Go to page <FontAwesomeIcon icon={faShareFromSquare} />
             </SiteButton>
+            </Link>
           </Button>
           <EventList>변압기 공동구매</EventList>
           <Button>
+          <Link to="/GroupBuying">
             <SiteButton>
               Go to page <FontAwesomeIcon icon={faShareFromSquare} />
             </SiteButton>
+            </Link>
           </Button>
         </ListTitile>
       </AdvBanner>

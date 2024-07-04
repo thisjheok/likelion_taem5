@@ -36,7 +36,6 @@ const WorkingHoliday = () => {
   return (
     <>
       <Header />
-
       <BackGround>
         <Sidebar></Sidebar>
         <Wrapper>

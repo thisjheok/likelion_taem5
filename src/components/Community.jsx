@@ -28,6 +28,9 @@ const Title = styled.div`
   color: #0a124d;
   border-bottom: 0.5px solid #dcdcdc;
   padding-top: 20px;
+  background-color: lightyellow;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
 `;
 
 const CommunityDiv = styled.div`

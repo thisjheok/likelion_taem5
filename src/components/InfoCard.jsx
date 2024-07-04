@@ -9,6 +9,7 @@ const ContentBox = styled.div`
   box-shadow: 0 0.375rem 0.75rem rgba(140, 152, 164, 0.075);
   margin: 20px;
   margin-top: 10px;
+  background-color: lightyellow;
 `;
 const Title = styled.div`
   width: 100%;
@@ -19,6 +20,9 @@ const Title = styled.div`
   color: #0a124d;
   border-bottom: 0.5px solid #dcdcdc;
   padding-top: 20px;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 `;
 const CountryBox = styled.div`
   display: flex;
@@ -42,21 +46,22 @@ const CountryTag = styled.div`
 `;
 const SiteButton = styled.button`
   display: flex;
-  width: 75px;
+  width: 80px;
   height: 30px;
   font-size: 11px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 10px;
   margin: 0px 5px 0px 5px;
-  border: none;
-  color: white;
+  border: 3px solid #ffd43b;
+  color: #0a124d;
   font-weight: bold;
-  background-color: #ffd43b;
+  background-color: white;
+
   text-align: center;
   justify-content: center;
 
   &:hover {
-    background-color: #fafabe;
+    background-color: #ffd43b;
     cursor: pointer;
     color: #0a124d;
   }

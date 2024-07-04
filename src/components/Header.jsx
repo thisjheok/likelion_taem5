@@ -92,7 +92,7 @@ const Logo = styled.img`
 const Header = () => {
   return (
     <Container>
-      <Logobar to="/workingholiday">
+      <Logobar to="/Main">
         <Logo src={logo} alt="Logo" />
       </Logobar>
       <Navebar>

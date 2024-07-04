@@ -1,6 +1,7 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import logoImage from '../assets/Biglogo.png';
 
 const Container = styled.div`
@@ -103,59 +104,114 @@ const Label = styled.label`
 
 const SignUp = () => {
   const navigate = useNavigate();
-  
+  const [formData, setFormData] = useState({
+    username: '',
+    birth_date: '',
+    gender: 'M',
+    email: '',
+    phone_number: '',
+    id: '',
+    password: '',
+    password_confirm: ''
+  });
+  const [agreed, setAgreed] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id.replace('id_', '')]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!agreed) {
+      alert('약관에 동의해주세요.');
+      return;
+    }
+    if (formData.password !== formData.password_confirm) {
+      alert('비밀번호가 일치하지 않습니다.');
+      return;
+    }
+    try {
+      const response = await axios.post('http://43.200.226.225/signup/', formData);
+      if (response && response.data) {
+        console.log(response.data);
+        alert('회원가입이 완료되었습니다.');
+        navigate('/login');
+      } else {
+        throw new Error('서버 응답이 없습니다.');
+      }
+    } catch (error) {
+      console.error('Error during sign up:', error);
+      if (error.response) {
+        // 서버가 2xx 범위를 벗어나는 상태 코드로 응답한 경우
+        console.error('Server responded with:', error.response.data);
+        alert(`회원가입에 실패했습니다: ${JSON.stringify(error.response.data)}`);
+      } else if (error.request) {
+        // 요청이 전송되었지만 응답을 받지 못한 경우
+        console.error('No response received:', error.request);
+        alert('서버로부터 응답을 받지 못했습니다. 네트워크 연결을 확인해주세요.');
+      } else {
+        // 요청 설정 중에 오류가 발생한 경우
+        console.error('Error setting up the request:', error.message);
+        alert('요청 설정 중 오류가 발생했습니다.');
+      }
+    }
+  };
+
   const cancelClick = () => {
     navigate('/Login');
   };
 
   return (
     <Container>
-      <Form>
+      <Form as="form" onSubmit={handleSubmit}>
         <LogoImage src={logoImage}/>
         <Title>회원가입</Title>
         <Subtitle>계정을 만들기 위해 정보를 입력해주세요</Subtitle>
         <LabelContainer>
-          <Label htmlFor="name">이름</Label>
-          <Input id="name" type="text" placeholder="이름" />
+          <Label htmlFor="id_username">이름</Label>
+          <Input id="id_username" type="text" placeholder="이름" onChange={handleChange} required />
         </LabelContainer>
         <LabelContainer>
-          <Label htmlFor="date">생년월일</Label>
-          <Input id="date" type="date" />
+          <Label htmlFor="id_birth_date">생년월일</Label>
+          <Input id="id_birth_date" type="date" onChange={handleChange} required />
         </LabelContainer>
         <LabelContainer>
-          <Label htmlFor="gender">성별</Label>
-          <Select id="gender">
-            <option value="male">남자</option>
-            <option value="female">여자</option>
+          <Label htmlFor="id_gender">성별</Label>
+          <Select id="id_gender" onChange={handleChange} required>
+            <option value="M">남자</option>
+            <option value="F">여자</option>
           </Select>
         </LabelContainer>
         <LabelContainer>
-          <Label htmlFor="email">이메일</Label>
-          <Input id="email" type="email" placeholder="이메일" />
+          <Label htmlFor="id_email">이메일</Label>
+          <Input id="id_email" type="email" placeholder="이메일" onChange={handleChange} required />
         </LabelContainer>
         <LabelContainer>
-          <Label htmlFor="phone">전화번호</Label>
-          <Input id="phone" type="text" placeholder="전화번호" />
+          <Label htmlFor="id_phone_number">전화번호</Label>
+          <Input id="id_phone_number" type="text" placeholder="전화번호" onChange={handleChange} required />
         </LabelContainer>
         <LabelContainer>
-          <Label htmlFor="username">아이디</Label>
-          <Input id="username" type="text" placeholder="아이디" />
+          <Label htmlFor="id_id">아이디</Label>
+          <Input id="id_id" type="text" placeholder="아이디" onChange={handleChange} required />
         </LabelContainer>
         <LabelContainer>
-          <Label htmlFor="password">비밀번호</Label>
-          <Input id="password" type="password" placeholder="비밀번호" />
+          <Label htmlFor="id_password">비밀번호</Label>
+          <Input id="id_password" type="password" placeholder="비밀번호" onChange={handleChange} required />
         </LabelContainer>
         <LabelContainer>
-          <Label htmlFor="confirmPassword">비밀번호 확인</Label>
-          <Input id="confirmPassword" type="password" placeholder="비밀번호 확인" />
+          <Label htmlFor="id_password_confirm">비밀번호 확인</Label>
+          <Input id="id_password_confirm" type="password" placeholder="비밀번호 확인" onChange={handleChange} required />
         </LabelContainer>
         <CheckboxContainer>
-          <Checkbox type="checkbox" />
+          <Checkbox type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} />
           <label><a href="#">자사의 정책과 조건</a>에 동의합니다.</label>
         </CheckboxContainer>
         <ButtonContainer>
-          <Button>Submit</Button>
-          <Button cancel onClick={cancelClick}>Cancel</Button>
+          <Button type="submit">Submit</Button>
+          <Button type="button" cancel onClick={cancelClick}>Cancel</Button>
         </ButtonContainer>
       </Form>
     </Container>
