@@ -45,6 +45,12 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True # all 추가
 
+# 오류뜨는 것 같아 주석처리
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",  # 프론트엔드 개발 서버 주소
+# ]
+
+
 # 추가 설정
 CORS_ALLOW_CREDENTIALS = True  # 자격 증명 허용
 
@@ -136,8 +142,4 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # 프론트엔드 개발 서버 주소
-]
-
 
