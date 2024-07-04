@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import *
-from .serializer import *
+from .serializers import *
 
 @admin.register(MyUser)
 class MyUserAdmin(admin.ModelAdmin):

@@ -10,7 +10,7 @@ from django.utils import timezone
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .serializer import *
+from .serializers import *
 from drf_yasg.utils import swagger_auto_schema
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
@@ -36,29 +36,23 @@ CATEGORY_NAME_MAPPING = {
     tags=["회원가입"],
     operation_summary="회원가입",
     operation_description="회원가입을 처리합니다.",
+    request_body=SignUpSerializer,
     responses={
         201: '회원가입 성공',
         400: '잘못된 요청',
         500: '서버 오류'
     }
 )
-
-
-@api_view(['POST']) #추가
+@api_view(['POST'])
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.data)  # request.POST 대신 request.data를 사용
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.set_password(form.cleaned_data['password'])
-            user.save()
+        serializer = SignUpSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
             login(request, user)  # 회원가입 후 자동으로 로그인
             return JsonResponse({"message": "Signup successful"}, status=201)
-        else:
-            errors = dict(form.errors.items())
-            return JsonResponse({"error": errors}, status=400)
-    else:
-        return JsonResponse({"error": "Invalid request method"}, status=405)
+        return JsonResponse(serializer.errors, status=400)
+    return JsonResponse({"error": "Invalid request method"}, status=405)
 
 # 로그인
 @swagger_auto_schema(
@@ -66,29 +60,28 @@ def signup(request):
     tags=["로그인"],
     operation_summary="로그인",
     operation_description="로그인을 처리합니다.",
+    request_body=LoginSerializer,
     responses={
         200: '로그인 성공',
         400: '잘못된 요청',
         500: '서버 오류'
     }
 )
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def login_view(request):
     if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(request, username=username, password=password)
+        serializer = LoginSerializer(data=request.data)
+        if serializer.is_valid():
+            id = serializer.validated_data.get('id')
+            password = serializer.validated_data.get('password')
+            user = authenticate(request, username=id, password=password)
             if user is not None:
                 user.last_login = timezone.now()  # 마지막 로그인 시간 갱신
                 user.save()
                 login(request, user)
                 return redirect('home')  # 로그인 후 이동할 페이지
-    else:
-        form = LoginForm()
-    return render(request, 'workhol/login.html', {'form': form})
-
+        return JsonResponse({"error": "Invalid credentials"}, status=400)
+    return JsonResponse({"error": "Invalid request method"}, status=405)
 # 홈
 @swagger_auto_schema(
     method="get",
@@ -155,57 +148,22 @@ def intern_site(request):
     tags=["게시물"],
     operation_summary="게시물 생성",
     operation_description="새로운 게시물을 생성합니다.",
+    request_body=PostSerializer,
     responses={
         201: '게시물 생성 성공',
         400: '잘못된 요청',
         500: '서버 오류'
     }
 )
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def create_post(request, site_name, category_name):
-    initial_continents = [
-        ('AS', '아시아'),
-        ('EU', '유럽'),
-        ('NA', '북아메리카'),
-        ('SA', '남아메리카'),
-        ('AF', '아프리카'),
-        ('OC', '오세아니아'),
-        ('ME', '중동')
-    ]
-
-    if not Continent.objects.exists():
-        for code, name in initial_continents:
-            Continent.objects.create(continent_name=code)
-
-    site_name_kr = SITE_NAME_MAPPING.get(site_name)
-    category_name_kr = CATEGORY_NAME_MAPPING.get(category_name)
-    
-    site, _ = Site.objects.get_or_create(site_name=site_name)
-    category, _ = Category.objects.get_or_create(category_name=category_name)
-    site_category,_ = SiteCategory.objects.get_or_create(site=site, category=category)
-
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.site = site
-            post.category = category
-            post.site_category = site_category
-            post.author = request.user
-            request.user.point += 50
-            post.save()
-            return redirect('post_list', site_name=site_name, category_name=category_name)
-        else:
-            print(form.errors)
-    else:
-        form = PostForm()
-
-    context = {
-        'form': form,
-        'site_name': site_name,
-        'category_name': category_name,
-    }
-    return render(request, 'workhol/create_post.html', context)
+        serializer = PostSerializer(data=request.data)
+        if serializer.is_valid():
+            post = serializer.save(author=request.user)
+            return JsonResponse({"message": "Post created successfully"}, status=201)
+        return JsonResponse(serializer.errors, status=400)
+    return JsonResponse({"error": "Invalid request method"}, status=405)
 
 # 게시물 목록
 @swagger_auto_schema(
@@ -250,6 +208,7 @@ def post_detail(request, site_name, category_name, id):
     tags=["게시물"],
     operation_summary="게시물 수정",
     operation_description="게시물을 수정합니다.",
+    request_body=PostSerializer,
     responses={
         200: '게시물 수정 성공',
         403: '권한 없음',
@@ -257,21 +216,19 @@ def post_detail(request, site_name, category_name, id):
         500: '서버 오류'
     }
 )
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def post_update(request, site_name, category_name, id):
     post = get_object_or_404(Post, id=id, site__site_name=site_name, category__category_name=category_name)
     if request.user != post.author:
-        return redirect('post_detail', site_name=site_name, category_name=category_name, id=id)
+        return HttpResponseForbidden("You are not allowed to update this post")
 
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES, instance=post)
-        if form.is_valid():
-            form.save()
-            return redirect('post_detail', site_name=site_name, category_name=category_name, id=id)
-    else:
-        form = PostForm(instance=post)
-    
-    return render(request, 'workhol/post_update.html', {'form': form})
+        serializer = PostSerializer(post, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse({"message": "Post updated successfully"}, status=200)
+        return JsonResponse(serializer.errors, status=400)
+    return JsonResponse({"error": "Invalid request method"}, status=405)
 
 # 게시물 삭제
 @swagger_auto_schema(
@@ -294,9 +251,8 @@ def post_delete(request, site_name, category_name, id):
 
     if request.method == 'POST':
         post.delete()
-        return redirect('post_list', site_name=site_name, category_name=category_name)
-    
-    return render(request, 'workhol/post_confirm_delete.html', {'post': post})
+        return JsonResponse({"message": "Post deleted successfully"}, status=200)
+    return JsonResponse({"error": "Invalid request method"}, status=405)
 
 # 좋아요 누르기 기능 추가
 @swagger_auto_schema(
@@ -315,7 +271,7 @@ def press_like(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.likes += 1  # 좋아요 수를 1 증가
     post.save()
-    return Response({'message': f'{pk}의 총 좋아요 수는 {post.likes}입니다.'}, status=status.HTTP_200_OK)
+    return JsonResponse({'message': f'{pk}의 총 좋아요 수는 {post.likes}입니다.'}, status=status.HTTP_200_OK)
 
 # 댓글 작성 기능 추가
 @swagger_auto_schema(
@@ -323,34 +279,21 @@ def press_like(request, pk):
     tags=["댓글"],
     operation_summary="댓글 작성",
     operation_description="게시물에 댓글을 작성합니다.",
+    request_body=CommentsSerializer,
     responses={
         201: '댓글 작성 성공',
         400: '잘못된 요청',
         500: '서버 오류'
     }
 )
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def create_comments(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    comments = post.comments.all()
-    if request.method == 'POST':
-        form = CommentsForm(request.POST, request.FILES)        
-        if form.is_valid():
-            comments = form.save(commit=False)
-            comments.post = post
-            request.user.point += 10
-            comments.save()
-            return redirect('create_comments', pk=pk)
-        else:
-            print(form.errors)
-    else:
-        form = CommentsForm()
-
-    context = {
-        'form': form,
-        'post': post,
-    }
-    return render(request, 'workhol/create_comments.html', context)
+    serializer = CommentsSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(post=post, author=request.user)
+        return JsonResponse({"message": "Comment added successfully"}, status=201)
+    return JsonResponse(serializer.errors, status=400)
 
 # 댓글 삭제 기능 추가
 @swagger_auto_schema(
@@ -367,19 +310,22 @@ def create_comments(request, pk):
 )
 @api_view(['POST'])
 def delete_comments(request, pk):
+    comments = get_object_or_404(Comments, pk=pk)
     if request.user != comments.author:
-        return HttpResponseForbidden("You are not allowed to delete this post")
+        return HttpResponseForbidden("You are not allowed to delete this comment")
+
     if request.method == 'POST':
-        comments = get_object_or_404(Comments, pk=pk)
         comments.delete()
-        return JsonResponse({'message': "댓글이 삭제되었습니다"})
-    
+        return JsonResponse({"message": "Comment deleted successfully"}, status=200)
+    return JsonResponse({"error": "Invalid request method"}, status=405)
+
 # 댓글 수정 기능 추가
 @swagger_auto_schema(
     method="post",
     tags=["댓글"],
     operation_summary="댓글 수정",
     operation_description="게시물의 댓글을 수정합니다.",
+    request_body=CommentsSerializer,
     responses={
         200: '댓글 수정 성공',
         403: '권한 없음',
@@ -389,24 +335,24 @@ def delete_comments(request, pk):
 )
 @api_view(['POST'])
 def update_comments(request, pk):
+    comments = get_object_or_404(Comments, pk=pk)
     if request.user != comments.author:
-        return HttpResponseForbidden("You are not allowed to delete this post")
+        return HttpResponseForbidden("You are not allowed to update this comment")
+
     if request.method == 'POST':
-        comments = get_object_or_404(Comments, pk=pk)
-        data = json.loads(request.body)
-        comments.content = data.get('content')
-        comments.save()
-        return JsonResponse({"message": '댓글이 수정되었습니다'})
+        serializer = CommentsSerializer(comments, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse({"message": "Comment updated successfully"}, status=200)
+        return JsonResponse(serializer.errors, status=400)
+    return JsonResponse({"error": "Invalid request method"}, status=405)
 
-
-# 회원정보 기능 추가 
-
-
+# 회원정보 기능 추가
 @swagger_auto_schema(
-    method='get',
-    tags=['회원정보'],
-    operation_summary='회원정보 확인',
-    operation_description='회원정보와 작성한 글, 댓글을 확인합니다.',
+    method="get",
+    tags=["회원정보"],
+    operation_summary="회원정보 확인",
+    operation_description="회원정보와 작성한 글, 댓글을 확인합니다.",
     responses={
         200: '회원정보 확인 성공',
         500: '서버 오류'
@@ -416,21 +362,13 @@ def update_comments(request, pk):
 @login_required
 def mypage(request):
     user = request.user
-
     posts = Post.objects.filter(author=user)
     comments = Comments.objects.filter(author=user)
 
     if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=user)
-        if form.is_valid():
-            form.save()
-            return redirect('mypage')
-    else:
-        form = UserProfileForm(instance=user)
-
-    context = {
-        'form': form,
-        'posts': posts,
-        'comments': comments,
-    }
-    return render(request, 'workhol/mypage.html', context)
+        serializer = UserProfileSerializer(user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse({"message": "Profile updated successfully"}, status=200)
+        return JsonResponse(serializer.errors, status=400)
+    return render(request, 'workhol/mypage.html', {'posts': posts, 'comments': comments})
