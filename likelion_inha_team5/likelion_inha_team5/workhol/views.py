@@ -391,10 +391,11 @@ def update_comments(request, pk):
     }
 )
 @api_view(['GET'])
-def comment_detail(request,id):
-    comment = get_object_or_404(Comments, post=id)
-    serializer = CommentsSerializer(comment) #추가
-    return Response(serializer.data, status=200) #추가
+def comment_detail(request, id):
+    post = get_object_or_404(Post, id=id)
+    comments = Comments.objects.filter(post=post)
+    serializer = CommentsSerializer(comments, many=True)
+    return Response(serializer.data, status=200)
 
 
 # # 회원정보 기능 추가
