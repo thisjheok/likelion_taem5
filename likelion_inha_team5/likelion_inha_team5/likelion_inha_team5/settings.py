@@ -42,7 +42,7 @@ MIDDLEWARE = [
 ]
 
 # 오류뜨는 것 같아 주석처리
-# CORS_ALLOW_ALL_ORIGINS = True # all 추가
+CORS_ALLOW_ALL_ORIGINS = True # all 추가
 
 
 # CORS_ALLOWED_ORIGINS = [
@@ -51,7 +51,7 @@ MIDDLEWARE = [
 
 
 # 추가 설정
-# CORS_ALLOW_CREDENTIALS = True  # 자격 증명 허용
+CORS_ALLOW_CREDENTIALS = True  # 자격 증명 허용
 
 CORS_ALLOW_HEADERS = ['*']
 # CORS_ALLOW_HEADERS = [
