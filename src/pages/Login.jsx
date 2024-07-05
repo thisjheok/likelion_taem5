@@ -69,7 +69,7 @@ const Anchor=styled.a`
 const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    username: '',
+    id: '',
     password: ''
   });
   const [error, setError] = useState('');
@@ -108,8 +108,8 @@ const Login = () => {
         <Input 
           type="text" 
           placeholder="아이디" 
-          id="id_username"
-          value={formData.username}
+          id="id_id"
+          value={formData.id}
           onChange={handleChange}
           required
         />

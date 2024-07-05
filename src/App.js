@@ -26,7 +26,14 @@ import MobileMain from './pages/MobileMain';
 import MobilePostList from './pages/MobilePostList';
 import MobilePostRead from './pages/MobilePostRead';
 import MobileHotList from './pages/MobileHotList';
+import MobileArrive from './pages/MobileArriveList';
+import Mobileback from './pages/MobileBackList';
+import MobileProfile from './pages/MobileMypage';
+import UserInfo from './pages/Userinfo';
+import SideBarPage from './pages/MobileSidebar';
+import MobileAbroad from './pages/MobileAbroadLife';
 import './App.css';  // CSS 애니메이션을 위한 파일
+import MobileGroup from './pages/MobileGroup';
 
 const Container = styled.div`
   position: relative;
@@ -50,19 +57,20 @@ const App = () => {
             <Route path="/writing" element={<Writing />} />
             <Route path="/home" element={<Home/>} /> 
             <Route path="/postlist/:country" element={<PostList/>}/>  
-            <Route path="/postread" element={<PostRead/>} />  
+            <Route path="/postread/:postId" element={<PostRead/>} />  
             <Route path="/Main" element={<Main/>} />  
             <Route path="/GroupBuying" element={<GroupBuying/>}/>
             <Route
-              path="/communitypage/:category"
+              path=":category/communitypage/"
               element={<CommunityPage />}
             />
-            <Route path="/Review/:category" element={<Review/>}/>
+            <Route path="/:category/Review/" element={<Review/>}/>
             <Route path="/Arrive" element={<Arrive/>}/>
             <Route path="/AbroadLife" element={<AbroadLife/>}/>
             <Route path="/LeavingInfo" element={<LeavingInfo/>}/>
             <Route path="/Intern" element={<Intern/>}/>
             <Route path="/Study" element={<Study/>}/>
+            <Route path="/UserInfo" element={<UserInfo/>}/>
             <Route 
               path="/msignup" 
               element={isMobile ? <MobileSignUp /> : <Navigate to="/signup" replace />} 
@@ -86,6 +94,31 @@ const App = () => {
              <Route 
               path="/mpostread/:type/:postId" 
               element={isMobile ? <MobilePostRead /> : <Navigate to="/PostRead" replace />} 
+            />
+             <Route 
+              path="/marrive" 
+              element={isMobile ? <MobileArrive /> : <Navigate to="/AbroadLife" replace />} 
+            />
+            <Route 
+              path="/mback" 
+              element={isMobile ? <Mobileback /> : <Navigate to="/Arrive" replace />} 
+            />
+            <Route 
+              path="/mmypage" 
+              element={<MobileProfile />} 
+            />
+            <Route 
+              path="/" 
+              element={isMobile ? <Mobileback /> : <Navigate to="/Arrive" replace />} 
+            />
+            <Route path="/sidebar" element={<SideBarPage />} />
+            <Route 
+              path="/mabroadlife" 
+              element={isMobile ? <MobileAbroad /> : <Navigate to="/Arrive" replace />} 
+            />
+            <Route 
+              path="/mgroup" 
+              element={isMobile ? <MobileGroup /> : <Navigate to="/GroupBuying" replace />} 
             />
           </Routes>
         </CSSTransition>

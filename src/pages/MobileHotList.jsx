@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import MobileCard from '../components/MobileCard';
 import { hotPosts } from '../HotPost';
 
@@ -47,6 +47,10 @@ const NavItem = styled.div`
 
 const MobileHotList = () => {
   const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
+  const handleOpenSideBar = () => {
+    navigate('/sidebar');
+  };
 
   useEffect(() => {
     // 좋아요 순으로 정렬된 게시물 설정
@@ -65,9 +69,11 @@ const MobileHotList = () => {
         ))}
       </ScrollableContent>
       <BottomNav>
-        <NavItem>☰</NavItem>
-        <NavItem>⌂</NavItem>
-        <NavItem>👤</NavItem>
+      <NavItem onClick={handleOpenSideBar}>☰</NavItem>
+            <NavItem>
+              <Link to={`/mmain`}style={{ color: '#333', textDecoration: 'none' }}>⌂</Link>
+            </NavItem>
+            <NavItem><Link to={`/mmypage`} style={{ color: '#333', textDecoration: 'none' }}>👤</Link></NavItem>
       </BottomNav>
     </PageContainer>
   );

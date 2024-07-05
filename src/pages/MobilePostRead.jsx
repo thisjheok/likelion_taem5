@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,Link,useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import logoImage from '../assets/Biglogo.png';
 import { dummyPosts } from '../dummyPost';
 import { hotPosts } from '../HotPost';
-
+import {travelInfoBeforeDeparture} from '../AbroadPost'
+import {livingAbroadInfo} from '../AbroadLife'
+import { infoBeforeReturningHome } from '../Comeback';
+import {sharedItemsPosts} from '../Group';
 const PageContainer = styled.div`
   width: 100%;
   max-width: 390px;
@@ -19,6 +22,8 @@ const Header = styled.div`
   padding: 20px;
   border-bottom: 1px solid #e0e0e0;
   margin-top: 60px;
+  display: flex;
+  align-items: center;
 `;
 
 const LogoImage = styled.img`
@@ -93,18 +98,53 @@ const Comment = styled.div`
   font-size: 13px;
 `;
 
+const NavItem = styled.div`
+  font-size: 24px;
+`;
+
+const BottomNav = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;
+  height: 60px;
+  background-color: #ffec7e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+`;
+
+const BackButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+`;
+
 const MobilePostRead = () => {
   const { type, postId } = useParams();
   const [postData, setPostData] = useState(null);
   const [liked, setLiked] = useState(false);
   const [newComment, setNewComment] = useState('');
-
+  const navigate = useNavigate();
   useEffect(() => {
     let post;
     if (type === 'dummy') {
       post = dummyPosts.find(p => p.id === parseInt(postId));
     } else if (type === 'hot') {
       post = hotPosts.find(p => p.id === parseInt(postId));
+    }else if(type==='arrive'){
+      post = travelInfoBeforeDeparture.find(p => p.id === parseInt(postId));
+    }else if(type==='abroadlife'){
+      post = livingAbroadInfo.find(p => p.id === parseInt(postId));
+    }else if(type==='back'){
+      post = infoBeforeReturningHome.find(p => p.id === parseInt(postId)); 
+    }else if(type==='group'){
+      post = sharedItemsPosts.find(p => p.id === parseInt(postId)); 
     }
 
     if (post) {
@@ -136,12 +176,15 @@ const MobilePostRead = () => {
       setNewComment('');
     }
   };
-
+  const handleBack = () => {
+    navigate(-1);
+  };
   if (!postData) return <PageContainer><Content>글을 찾을 수 없습니다.</Content></PageContainer>;
 
   return (
     <PageContainer>
       <Header>
+      <BackButton onClick={handleBack}>←</BackButton>
         <LogoImage src={logoImage} alt="Through World" />
       </Header>
       <Content>
@@ -169,6 +212,13 @@ const MobilePostRead = () => {
           </CommentForm>
         </CommentSection>
       </Content>
+      <BottomNav>
+            <NavItem>☰</NavItem>
+            <NavItem>
+              <Link to={`/mmain`} style={{ color: '#333', textDecoration: 'none' }}>⌂</Link>
+            </NavItem>
+            <NavItem><Link to={`/mmypage`} style={{ color: '#333', textDecoration: 'none' }}>👤</Link></NavItem>
+      </BottomNav>
     </PageContainer>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState , useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import MobileCard from '../components/MobileCard';
 import {Link,useNavigate} from 'react-router-dom';
-import { dummyPosts } from '../dummyPost';
+import { infoBeforeReturningHome } from '../Comeback';
 
 const PageContainer = styled.div`
   width: 100%;
@@ -67,11 +67,13 @@ const NavItem = styled.div`
   font-size: 24px;
 `;
 
-const MobilePostList = () => {
+
+
+const Mobileback = () => {
     const [posts, setPosts] = useState([]);
     const [activeFilter, setActiveFilter] = useState('전체');
     const [activeSort, setActiveSort] = useState('인기순');
-  
+    const navigate = useNavigate();
     const countryInfo = {
       전체: { flag: '🌍' },
       캐나다: { flag: '🇨🇦' },
@@ -83,13 +85,9 @@ const MobilePostList = () => {
     };
   
     useEffect(() => {
-        setPosts(dummyPosts);
+        setPosts(infoBeforeReturningHome);
       }, []);
-      const navigate = useNavigate();
-      const handleOpenSideBar = () => {
-        navigate('/sidebar');
-      };
-
+  
     const sortPosts = useCallback((postsToSort) => {
       return [...postsToSort].sort((a, b) => {
         if (activeSort === '인기순') {
@@ -100,6 +98,9 @@ const MobilePostList = () => {
       });
     }, [activeSort]);
   
+    const handleOpenSideBar = () => {
+      navigate('/sidebar');
+    };
     const filteredAndSortedPosts = useCallback(() => {
       let filtered = activeFilter === '전체' ? posts : posts.filter(post => post.country === activeFilter);
       return sortPosts(filtered);
@@ -108,7 +109,7 @@ const MobilePostList = () => {
     return (
         <PageContainer>
           <ScrollableContent>
-            <Title>커뮤니티</Title>
+            <Title>귀국 전 정보</Title>
             <FilterContainer>
               {Object.entries(countryInfo).map(([country, info]) => (
                 <FilterButton 
@@ -133,7 +134,7 @@ const MobilePostList = () => {
               ))}
             </FilterContainer>
             {filteredAndSortedPosts().map(post => (
-            <Link to={`/mpostread/dummy/${post.id}`} key={post.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to={`/mpostread/back/${post.id}`} key={post.id} style={{ textDecoration: 'none', color: 'inherit' }}>
               <MobileCard {...post} />
             </Link>
           ))}
@@ -149,4 +150,4 @@ const MobilePostList = () => {
       );
   };
   
-  export default MobilePostList;
+  export default Mobileback;
