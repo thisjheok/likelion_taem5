@@ -72,7 +72,7 @@ def login_view(request):
     if serializer.is_valid():
         id = serializer.validated_data.get('id')
         password = serializer.validated_data.get('password')
-        user = authenticate(request, username=id, password=password)
+        user = authenticate(request, id=id, password=password) # 7/5 17:11 username=id부분 id=id로 수정
         if user is not None:
             user.last_login = timezone.now()  # 마지막 로그인 시간 갱신
             user.save()
