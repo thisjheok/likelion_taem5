@@ -39,7 +39,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
 
@@ -55,8 +54,18 @@ CORS_ALLOW_ALL_ORIGINS = True # all 추가
 # 추가 설정
 CORS_ALLOW_CREDENTIALS = True  # 자격 증명 허용
 
-CORS_ALLOW_HEADERS = ['*']
-
+#CORS_ALLOW_HEADERS = ['*']
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 #아래는 오류났던 코드
 # CORS_ALLOW_HEADERS = [
 #     'authorization',
@@ -64,7 +73,7 @@ CORS_ALLOW_HEADERS = ['*']
 #     'x-csrftoken',
 #     'x-requested-with',
 # ]
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '43.200.226.225']
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',
@@ -73,6 +82,8 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]
+DEBUG = True
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
 
 ROOT_URLCONF = "likelion_inha_team5.urls"
 
