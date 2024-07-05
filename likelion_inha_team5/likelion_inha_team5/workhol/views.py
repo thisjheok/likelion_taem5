@@ -77,7 +77,9 @@ def login_view(request):
             user.last_login = timezone.now()  # 마지막 로그인 시간 갱신
             user.save()
             login(request, user)
-            return redirect('home')  # 로그인 후 이동할 페이지
+            return JsonResponse({"message": "로그인 성공"}, status=200)  # 로그인 성공 메시지 반환
+        else:
+            return JsonResponse({"error"}, status=403) # 오류 확인위해 추가
     return JsonResponse({"error": "Invalid credentials"}, status=400)
 
 # 홈
