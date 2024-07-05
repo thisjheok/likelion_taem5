@@ -73,7 +73,7 @@ CORS_ALLOW_HEADERS = [
 #     'x-csrftoken',
 #     'x-requested-with',
 # ]
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '43.200.226.225']
+
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',
@@ -82,8 +82,8 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]
-DEBUG = True
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
+
+
 
 ROOT_URLCONF = "likelion_inha_team5.urls"
 
