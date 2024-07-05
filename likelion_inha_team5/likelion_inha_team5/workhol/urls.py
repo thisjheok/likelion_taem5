@@ -26,6 +26,7 @@ urlpatterns = [
     path('intern/', views.intern_site, name='intern_site'),
     path('<str:site_name>/<str:category_name>/post/', views.create_post, name='create_post'),
     path('<str:site_name>/<str:category_name>/', views.post_list, name='post_list'),
+    path('<str:category_name>/', views.category_list, name='category_list'),
     path('<str:site_name>/<str:category_name>/<int:id>', views.post_detail, name='post_detail'),
     path('<str:site_name>/<str:category_name>/<int:id>/update/', views.post_update, name='post_update'),
     path('<str:site_name>/<str:category_name>/<int:id>/delete/', views.post_delete, name='post_delete'),

@@ -196,7 +196,25 @@ def post_list(request, site_name, category_name):
     site = get_object_or_404(Site, site_name=site_name)
     category = get_object_or_404(Category, category_name=category_name)
     posts = Post.objects.filter(site=site, category=category)
-    return render(request, 'workhol/post_list.html', {'posts': posts, 'site_name': site_name, 'category_name': category_name})
+    return Response({'posts': list(posts.values()), 'site_name': site_name, 'category_name': category_name}, status=200)
+
+# 각 카테고리 별 게시물 목록
+@swagger_auto_schema(
+    method="get",
+    tags=["카테고리별 게시물"],
+    operation_summary="카테고리별 게시물 목록",
+    operation_description="카테고리별게시물 목록을 가져옵니다.",
+    responses={
+        200: '카테고리별 게시물 목록 가져오기 성공',
+        500: '서버 오류'
+    }
+)
+@api_view(['GET'])
+def category_list(request, category_name):
+    category = get_object_or_404(Category, category_name=category_name)
+    posts = Post.objects.filter(category=category)
+    return Response({'posts': list(posts.values()), 'category_name': category_name}, status=200)
+
 
 # 게시물 상세보기
 @swagger_auto_schema(
