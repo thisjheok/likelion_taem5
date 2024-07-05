@@ -34,6 +34,7 @@ urlpatterns = [
     path('comments/<int:pk>', views.create_comments, name='create_comments'),
     path('delcomments/<int:pk>',views.delete_comments, name='delete_comments'),
     path('upcomments/<int:pk>',views.update_comments,name = 'update_comments'),
+    path('comments/list/<int:id>',views.comment_detail,name="comment_detail"),
     # path('mypage/', views.mypage, name='mypage'),
     
     # Swagger url

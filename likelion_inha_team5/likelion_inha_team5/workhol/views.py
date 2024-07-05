@@ -378,6 +378,25 @@ def update_comments(request, pk):
         return Response({"message": "Comment updated successfully"}, status=200)
     return Response(serializer.errors, status=400)
 
+
+@swagger_auto_schema(
+    method="get",
+    tags=["댓글"],
+    operation_summary="댓글 상세보기",
+    operation_description="댓글 상세 정보를 가져옵니다.",
+    responses={
+        200: '댓글 상세보기 성공',
+        404: '댓글 찾을 수 없음',
+        500: '서버 오류'
+    }
+)
+@api_view(['GET'])
+def comment_detail(request,id):
+    comment = get_object_or_404(Comments, post=id)
+    serializer = CommentsSerializer(comment) #추가
+    return Response(serializer.data, status=200) #추가
+
+
 # # 회원정보 기능 추가
 # @swagger_auto_schema(
 #     method="get",
@@ -403,3 +422,4 @@ def update_comments(request, pk):
 #             return Response({"message": "Profile updated successfully"}, status=200)
 #         return Response(serializer.errors, status=400)
 #     return render(request, 'workhol/mypage.html', {'posts': posts, 'comments': comments})
+
