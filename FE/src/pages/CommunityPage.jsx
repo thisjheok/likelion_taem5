@@ -84,6 +84,23 @@ const CardLink = styled(Link)`
   color: inherit;
 `;
 
+const WritingLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
+const WritingBtn = styled.div`
+  background: #FFD43B;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+  width: 70px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color:white;
+`
+
 const CommunityPage = () => {
   const [postsData, setPostsData] = useState({ category_name: "", posts: [] });
 
@@ -107,6 +124,7 @@ const CommunityPage = () => {
         <Sidebar />
         <MainContent>
           <h1>{postsData.category_name || "커뮤니티"}</h1>
+          <WritingBtn><WritingLink to={"/writing"}>글쓰기</WritingLink></WritingBtn>
           <PostGrid>
             {postsData.posts.map((post) => (
               <CardLink to={`/postread/${post.id}`} key={post.id}>
