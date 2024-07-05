@@ -21,7 +21,7 @@ const PageContainer = styled.div`
 const Header = styled.div`
   padding: 20px;
   border-bottom: 1px solid #e0e0e0;
-  margin-top: 60px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
 `;

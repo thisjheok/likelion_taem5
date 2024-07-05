@@ -52,19 +52,19 @@ const App = () => {
           classNames="fade"
         >
           <Routes location={location}>
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/writing" element={<Writing />} />
             <Route path="/home" element={<Home/>} /> 
             <Route path="/postlist/:country" element={<PostList/>}/>  
             <Route path="/postread/:postId" element={<PostRead/>} />  
-            <Route path="/Main" element={<Main/>} />  
+            <Route path="/" element={<Main/>} />  
             <Route path="/GroupBuying" element={<GroupBuying/>}/>
             <Route
-              path=":category/communitypage/"
+              path="/communitypage"
               element={<CommunityPage />}
             />
-            <Route path="/:category/Review/" element={<Review/>}/>
+            <Route path="/Review" element={<Review/>}/>
             <Route path="/Arrive" element={<Arrive/>}/>
             <Route path="/AbroadLife" element={<AbroadLife/>}/>
             <Route path="/LeavingInfo" element={<LeavingInfo/>}/>

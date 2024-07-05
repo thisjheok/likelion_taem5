@@ -43,9 +43,9 @@ const Sidebar = ({ text }) => {
   return (
     <>
       <Container>
-        <TitleName>{text}</TitleName>
-        <Category to={`/communitypage/${text}`}>{text} 커뮤니티</Category>
-        <Category to={`/review/${text}`}>{text} 국가별 후기</Category>
+        <TitleName>Through World</TitleName>
+        <Category to={`/communitypage`}>커뮤니티</Category>
+        <Category to={`/review`}> 국가별 후기</Category>
         <Category to="/leavinginfo">출국 전 정보</Category>
         <Category to="/abroadlife">도착 후 해외 생활 정보</Category>
         <Category to="/arrive">귀국 전 정보</Category>

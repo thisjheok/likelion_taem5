@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-import PostCard from "../components/PostCard";
-import { useParams } from "react-router-dom";
-
+import axios from 'axios';
+import { Link } from 'react-router-dom'; 
 const PageLayout = styled.div`
   display: flex;
   min-height: 100vh;
@@ -22,182 +21,105 @@ const PostGrid = styled.div`
   gap: 20px;
 `;
 
-const Country = styled.div`
-  color: #333;
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-`;
-
-const FilterButtons = styled.div`
-  margin-bottom: 20px;
-`;
-
-const FilterButton = styled.button`
-  margin-right: 10px;
-  padding: 5px 10px;
-  background-color: ${(props) => (props.active ? "#FFD43B" : "#f8f9fa")};
-  color: ${(props) => (props.active ? "white" : "black")};
-  border: 1px solid #ffd43b;
-  border-radius: 5px;
-  cursor: pointer;
-
+const CardContainer = styled.div`
+  width: 300px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 16px;
+  background-color: #ffffff;
   &:hover {
-    background-color: #ffd43b;
-    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 `;
 
+const CardHeader = styled.div`
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  ${CardContainer}:hover & {
+    background-color: #f5f5f5;
+  }
+`;
+
+const Title = styled.h2`
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  ${CardContainer}:hover & {
+    color: #FFD43B;
+  }
+`;
+
+const LikeCount = styled.span`
+  float: right;
+  color: #ff4081;
+`;
+
+const CardBody = styled.div`
+  padding: 16px;
+`;
+
+const Author = styled.p`
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+`;
+
+const Date = styled.span`
+  margin-left: 8px;
+  font-size: 12px;
+  color: #999;
+`;
+
+const Preview = styled.p`
+  margin: 8px 0;
+  font-size: 14px;
+  color: #333;
+`;
+
+const CardLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 const CommunityPage = () => {
-  const { category } = useParams();
-  const text = category || "";
-  const [posts, setPosts] = useState([]);
-  const [sortBy, setSortBy] = useState("likes");
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [postsData, setPostsData] = useState({ category_name: "", posts: [] });
 
-  const countryInfo = {
-    canada: { korName: "캐나다", flag: "🇨🇦" },
-    australia: { korName: "호주", flag: "🇦🇺" },
-    newzealand: { korName: "뉴질랜드", flag: "🇳🇿" },
-    england: { korName: "영국", flag: "🇬🇧" },
-    netherlands: { korName: "네덜란드", flag: "🇳🇱" },
-    germany: { korName: "독일", flag: "🇩🇪" },
-  };
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get('http://43.200.226.225/intern/community/postlist/');
+        setPostsData(response.data);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
+    };
 
-  const fetchPosts = useCallback(() => {
-    // 실제로는 여기서 API 호출을 통해 데이터를 가져올 것입니다.
-    const fetchedPosts = [
-      {
-        id: 1,
-        title: "캐나다 밴쿠버 여행 후기",
-        likes: 42,
-        author: "여행자123",
-        date: "2023-07-15",
-        preview: "밴쿠버의 아름다운 자연과 도시 풍경을 소개합니다.",
-        country: "canada",
-      },
-      {
-        id: 2,
-        title: "호주 시드니 오페라 하우스 탐방",
-        likes: 38,
-        author: "문화탐험가",
-        date: "2023-07-20",
-        preview: "시드니의 상징, 오페라 하우스를 둘러봤습니다.",
-        country: "australia",
-      },
-      {
-        id: 3,
-        title: "독일 베를린 장벽 투어",
-        likes: 55,
-        author: "역사buff",
-        date: "2023-08-05",
-        preview: "베를린 장벽의 역사와 현재 모습을 소개합니다.",
-        country: "germany",
-      },
-      {
-        id: 4,
-        title: "영국 런던 빅벤 야경",
-        likes: 60,
-        author: "야경사진가",
-        date: "2023-08-10",
-        preview: "런던의 상징 빅벤의 아름다운 야경을 담았습니다.",
-        country: "england",
-      },
-      {
-        id: 5,
-        title: "독일 뮌헨 맥주 축제",
-        likes: 70,
-        author: "맥주애호가",
-        date: "2023-09-15",
-        preview: "세계적으로 유명한 뮌헨 맥주 축제 체험기입니다.",
-        country: "germany",
-      },
-    ];
-    return fetchedPosts;
+    fetchPosts();
   }, []);
-
-  useEffect(() => {
-    const fetchedPosts = fetchPosts();
-    setPosts(fetchedPosts);
-  }, [fetchPosts]);
-
-  const sortPosts = useCallback(
-    (postsToSort) => {
-      return [...postsToSort].sort((a, b) => {
-        if (sortBy === "likes") {
-          return b.likes - a.likes;
-        } else {
-          return new Date(b.date) - new Date(a.date);
-        }
-      });
-    },
-    [sortBy]
-  );
-
-  useEffect(() => {
-    setPosts((prevPosts) => sortPosts(prevPosts));
-  }, [sortBy, sortPosts]);
-
-  const handleSortChange = (newSortBy) => {
-    setSortBy(newSortBy);
-  };
-
-  const handleCountrySelect = (country) => {
-    setSelectedCountry(country);
-  };
-
-  const filteredPosts = selectedCountry
-    ? posts.filter((post) => post.country === selectedCountry)
-    : posts;
 
   return (
     <>
       <Header />
       <PageLayout>
-        <Sidebar text={text} />
+        <Sidebar />
         <MainContent>
-          <Country>커뮤니티</Country>
-          <FilterButtons>
-            {Object.entries(countryInfo).map(([code, info]) => (
-              <FilterButton
-                key={code}
-                onClick={() => handleCountrySelect(code)}
-                active={selectedCountry === code}
-              >
-                {info.flag} {info.korName}
-              </FilterButton>
-            ))}
-            <FilterButton
-              onClick={() => setSelectedCountry(null)}
-              active={selectedCountry === null}
-            >
-              전체
-            </FilterButton>
-          </FilterButtons>
-          <FilterButtons>
-            <FilterButton
-              onClick={() => handleSortChange("likes")}
-              active={sortBy === "likes"}
-            >
-              인기순
-            </FilterButton>
-            <FilterButton
-              onClick={() => handleSortChange("date")}
-              active={sortBy === "date"}
-            >
-              최신순
-            </FilterButton>
-          </FilterButtons>
+          <h1>{postsData.category_name || "커뮤니티"}</h1>
           <PostGrid>
-            {filteredPosts.map((post) => (
-              <PostCard
-                key={post.id}
-                title={post.title}
-                likes={post.likes}
-                author={post.author}
-                date={post.date}
-                preview={post.preview}
-              />
+            {postsData.posts.map((post) => (
+              <CardLink to={`/postread/${post.id}`} key={post.id}>
+                <CardContainer>
+                  <CardHeader>
+                    <Title>{post.title} <LikeCount>❤ {post.likes}</LikeCount></Title>
+                  </CardHeader>
+                  <CardBody>
+                    <Author>{post.author_id || '익명'} <Date>{post.created_at || 'Unknown date'}</Date></Author>
+                    <Preview>{post.content}</Preview>
+                  </CardBody>
+                </CardContainer>
+              </CardLink>
             ))}
           </PostGrid>
         </MainContent>
