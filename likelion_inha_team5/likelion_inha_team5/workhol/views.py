@@ -175,8 +175,8 @@ def create_post(request, site_name, category_name):
     serializer = PostSerializer(data=request.data)
     if serializer.is_valid():
         post = serializer.save(author=request.user, site=site, category=category, site_category=site_category)
-        request.user.point += 50
-        request.user.save()
+        # request.user.point += 50
+        # request.user.save()
         return Response({"message": "Post created successfully"}, status=201)
     return Response(serializer.errors, status=400)
 
