@@ -233,8 +233,11 @@ def post_detail(request, site_name, category_name, id):
     site = get_object_or_404(Site, site_name=site_name)
     category = get_object_or_404(Category, category_name=category_name)
     post = get_object_or_404(Post, site=site, category=category, id=id)
-    return Response({'post': post}, status=200)
-    # return render(request, 'workhol/post_detail.html', {'post': post})
+    serializer = PostSerializer(post) #추가
+    return Response(serializer.data, status=200) #추가
+    
+    # return Response({'post': post}, status=200)
+    # return render(request, 'workhol/post_detail.html', {'post': post}) #기존 돌아가는 코드
 
 # 게시물 수정
 @swagger_auto_schema(
