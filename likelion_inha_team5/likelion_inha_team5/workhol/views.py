@@ -1,11 +1,9 @@
-from django.shortcuts import render, redirect
-import json
-from django.http import Response, HttpResponse, HttpResponseForbidden
+from django.shortcuts import render
+from django.http import HttpResponseForbidden
 from .models import *
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import login, authenticate
 from .forms import *
-from django.contrib.auth.forms import AuthenticationForm
 from django.utils import timezone
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -13,8 +11,7 @@ from rest_framework import status
 from .serializers import *
 from drf_yasg.utils import swagger_auto_schema
 from django.contrib.auth.decorators import login_required
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
+
 
 
 # 사이트 이름과 카테고리 이름 매핑
