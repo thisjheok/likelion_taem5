@@ -57,3 +57,9 @@ class CommentsForm(forms.ModelForm):
     class Meta:
         model = Comments
         fields = ['author', 'content']
+
+
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = MyUser
+        fields = ['email', 'username', 'birth_date', 'gender', 'phone_number']
