@@ -52,7 +52,7 @@ const App = () => {
           classNames="fade"
         >
           <Routes location={location}>
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/writing" element={<Writing />} />
             <Route path="/home" element={<Home/>} /> 
@@ -108,7 +108,7 @@ const App = () => {
               element={<MobileProfile />} 
             />
             <Route 
-              path="/" 
+              path="/mback" 
               element={isMobile ? <Mobileback /> : <Navigate to="/Arrive" replace />} 
             />
             <Route path="/sidebar" element={<SideBarPage />} />
