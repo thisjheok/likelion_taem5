@@ -33,7 +33,7 @@ class PostSerializer(serializers.ModelSerializer):
 class CommentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comments
-        fields = ['author', 'content']
+        fields = ['content'] # author 제거
 
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
