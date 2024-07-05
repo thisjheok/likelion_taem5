@@ -101,8 +101,7 @@ const PostRead = () => {
     if (newComment.trim()) {
       try {
         const response = await axios.post(`http://43.200.226.225/comments/${postId}`, {
-          content: newComment,
-          author:"익명"
+          content: newComment
         });
         setComments([...comments, response.data]);
         setNewComment("");

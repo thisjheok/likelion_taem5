@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.618a7d2a.css",
-    "main.js": "/static/js/main.d72b8bd1.js",
+    "main.js": "/static/js/main.fc913e88.js",
     "static/js/453.a71e9c61.chunk.js": "/static/js/453.a71e9c61.chunk.js",
     "static/media/아기사자.png": "/static/media/아기사자.a16e25fc4e0fa436d946.png",
     "static/media/banner.png": "/static/media/banner.dcd5c09e666eaf0c0114.png",
@@ -16,11 +16,11 @@
     "static/media/germany.png": "/static/media/germany.cc670a050b591bf6656d.png",
     "index.html": "/index.html",
     "main.618a7d2a.css.map": "/static/css/main.618a7d2a.css.map",
-    "main.d72b8bd1.js.map": "/static/js/main.d72b8bd1.js.map",
+    "main.fc913e88.js.map": "/static/js/main.fc913e88.js.map",
     "453.a71e9c61.chunk.js.map": "/static/js/453.a71e9c61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.618a7d2a.css",
-    "static/js/main.d72b8bd1.js"
+    "static/js/main.fc913e88.js"
   ]
 }
