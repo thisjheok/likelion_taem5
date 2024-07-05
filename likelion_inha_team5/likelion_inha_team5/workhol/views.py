@@ -252,8 +252,8 @@ def post_detail(request, site_name, category_name, id):
 @api_view(['POST'])
 def post_update(request, site_name, category_name, id):
     post = get_object_or_404(Post, id=id, site__site_name=site_name, category__category_name=category_name)
-    if request.user != post.author:
-        return HttpResponseForbidden("You are not allowed to update this post")
+    # if request.user != post.author:
+    #     return HttpResponseForbidden("You are not allowed to update this post")
 
     serializer = PostSerializer(post, data=request.data)
     if serializer.is_valid():
@@ -277,8 +277,8 @@ def post_update(request, site_name, category_name, id):
 @api_view(['POST'])
 def post_delete(request, site_name, category_name, id):
     post = get_object_or_404(Post, id=id, site__site_name=site_name, category__category_name=category_name)
-    if request.user != post.author:
-        return HttpResponseForbidden("You are not allowed to delete this post")
+    # if request.user != post.author:
+    #     return HttpResponseForbidden("You are not allowed to delete this post")
 
     post.delete()
     return Response({"message": "Post deleted successfully"}, status=200)
@@ -320,9 +320,9 @@ def create_comments(request, pk):
     post = get_object_or_404(Post, pk=pk)
     serializer = CommentsSerializer(data=request.data)
     if serializer.is_valid():
-        comments = serializer.save(post=post, author=request.user)
-        request.user.point += 10
-        request.user.save()
+        comments = serializer.save(post=post)
+        # request.user.point += 10
+        # request.user.save()
         return Response({"message": "Comment added successfully"}, status=201)
     return Response(serializer.errors, status=400)
 
@@ -374,28 +374,28 @@ def update_comments(request, pk):
         return Response({"message": "Comment updated successfully"}, status=200)
     return Response(serializer.errors, status=400)
 
-# 회원정보 기능 추가
-@swagger_auto_schema(
-    method="get",
-    tags=["회원정보"],
-    operation_summary="회원정보 확인",
-    operation_description="회원정보와 작성한 글, 댓글을 확인합니다.",
-    responses={
-        200: '회원정보 확인 성공',
-        500: '서버 오류'
-    }
-)
-@api_view(['GET', 'POST'])
-@login_required
-def mypage(request):
-    user = request.user
-    posts = Post.objects.filter(author=user)
-    comments = Comments.objects.filter(author=user)
+# # 회원정보 기능 추가
+# @swagger_auto_schema(
+#     method="get",
+#     tags=["회원정보"],
+#     operation_summary="회원정보 확인",
+#     operation_description="회원정보와 작성한 글, 댓글을 확인합니다.",
+#     responses={
+#         200: '회원정보 확인 성공',
+#         500: '서버 오류'
+#     }
+# )
+# @api_view(['GET', 'POST'])
+# @login_required
+# def mypage(request):
+#     user = request.user
+#     posts = Post.objects.filter(author=user)
+#     comments = Comments.objects.filter(author=user)
 
-    if request.method == 'POST':
-        serializer = UserProfileSerializer(user, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"message": "Profile updated successfully"}, status=200)
-        return Response(serializer.errors, status=400)
-    return render(request, 'workhol/mypage.html', {'posts': posts, 'comments': comments})
+#     if request.method == 'POST':
+#         serializer = UserProfileSerializer(user, data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response({"message": "Profile updated successfully"}, status=200)
+#         return Response(serializer.errors, status=400)
+#     return render(request, 'workhol/mypage.html', {'posts': posts, 'comments': comments})
