@@ -26,7 +26,7 @@ const ScrollableContent = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 10%; // 5%에서 7%로 증가
-  margin-top: 50px;
+  margin-top: 30px;
 `;
 
 const CountryBoard = styled.div`
