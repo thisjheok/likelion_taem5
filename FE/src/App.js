@@ -81,7 +81,7 @@ const App = () => {
             />
             <Route 
               path="/mmain" 
-              element={isMobile ? <MobileMain /> : <Navigate to="/main" replace />} 
+              element={isMobile} 
             />
             <Route 
               path="/mcommunity" 
